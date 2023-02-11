@@ -16,8 +16,8 @@ class CastAndCrewProfileWidget extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 64,
-          width: 64,
+          height: 72,
+          width: 72,
           child: Material(
             elevation: 8,
             shadowColor: const Color.fromRGBO(0, 0, 0, 0.1),

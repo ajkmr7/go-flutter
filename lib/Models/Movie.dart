@@ -9,11 +9,13 @@ class Movie {
   MovieDetails additionalDetails;
   List<CastAndCrewProfile> castAndCrewProfiles;
   List<Review> reviews;
+  String trailerURLPath;
 
   Movie(
       {required this.name,
       required this.posters,
       required this.additionalDetails,
       required this.castAndCrewProfiles,
-      required this.reviews});
+      required this.reviews,
+      required this.trailerURLPath});
 }

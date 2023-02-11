@@ -127,12 +127,15 @@ class MyApp extends StatelessWidget {
         date: DateTime(2022, 9, 13)),
   ];
 
+  final String trailerURLPath = 'OKBMCL-frPU';
+
   late final Movie movie = Movie(
       name: name,
       posters: posters,
       additionalDetails: additionalDetails,
       castAndCrewProfiles: castAndCrewProfiles,
-      reviews: reviews);
+      reviews: reviews,
+      trailerURLPath: trailerURLPath);
 
   @override
   Widget build(BuildContext context) {

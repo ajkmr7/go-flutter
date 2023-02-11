@@ -24,6 +24,8 @@ class MovieWidget extends StatefulWidget {
 }
 
 class _MovieWidgetState extends State<MovieWidget> {
+  late YoutubePlayerController _controller;
+
   Widget getReviewWidgets(List<Review> reviewList) {
     List<Widget> list = <Widget>[];
     for (final review in reviewList) {
@@ -55,7 +57,7 @@ class _MovieWidgetState extends State<MovieWidget> {
         ));
         list.add(
           const SizedBox(
-            width: 8,
+            width: 12,
           ),
         );
       }
@@ -67,13 +69,16 @@ class _MovieWidgetState extends State<MovieWidget> {
     );
   }
 
-  YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'OKBMCL-frPU',
-    flags: YoutubePlayerFlags(
-      autoPlay: true,
-      mute: false,
-    ),
-  );
+  @override
+  void initState() {
+    _controller = YoutubePlayerController(
+      initialVideoId: widget.movie.trailerURLPath,
+      flags: const YoutubePlayerFlags(
+        autoPlay: true,
+        mute: false,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
