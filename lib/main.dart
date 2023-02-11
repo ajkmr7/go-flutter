@@ -2,11 +2,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:flutter/material.dart';
 
-import 'MovieDetailsWidget.dart';
-import 'CastAndCrewProfileWidget.dart';
-import 'ReviewWidget.dart';
-import 'SimilarMovieWidget.dart';
-import 'Review.dart';
+import './Widgets/MovieDetailsWidget.dart';
+import './Widgets/CastAndCrewProfileWidget.dart';
+import './Widgets/ReviewWidget.dart';
+import './Widgets/SimilarMovieWidget.dart';
+
+import './Models/Review.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,9 +76,9 @@ class _MyHomePageState extends State<MyHomePage> {
         date: DateTime(2022, 9, 13)),
   ];
 
-  Widget getReviewWidgets(List<Review> strings) {
+  Widget getReviewWidgets(List<Review> reviewList) {
     List<Widget> list = <Widget>[];
-    reviews.map((review) {
+    for (final review in reviewList) {
       list.add(ReviewWidget(
         reviewerName: review.reviewerName,
         rating: review.rating,
@@ -85,9 +86,12 @@ class _MyHomePageState extends State<MyHomePage> {
         likeCount: review.likeCount,
         date: review.date,
       ));
-      list.add(SizedBox(width: 24));
-    });
-    return Row(children: list);
+      list.add(const SizedBox(width: 24));
+    }
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(children: list),
+    );
   }
 
   @override
@@ -330,10 +334,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 8,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [getReviewWidgets(reviews)],
-                ),
+                getReviewWidgets(reviews),
                 const SizedBox(
                   height: 12,
                 ),
