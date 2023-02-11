@@ -7,42 +7,95 @@ import './Widgets/CastAndCrewProfileWidget.dart';
 import './Widgets/ReviewWidget.dart';
 import './Widgets/SimilarMovieWidget.dart';
 
+import './Models/Movie.dart';
+import './Models/MovieDetails.dart';
+import './Models/CastAndCrewProfile.dart';
 import './Models/Review.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+  String name = 'Vikram';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  List<String> moviePosters = [
+  List<String> posters = [
     'assets/images/carousel1.jpeg',
     'assets/images/carousel2.jpg',
     'assets/images/carousel3.jpeg',
     'assets/images/carousel4.jpeg',
+  ];
+
+  MovieDetails additionalDetails = MovieDetails(
+    rating: 9.5,
+    votes: 241500,
+    categories: ['2D', 'Tamil'],
+    runtime: '2h 53m',
+    genres: ['Action', 'Thriller'],
+    censorCertificate: 'UA',
+    releaseDate: DateTime(2022, 6, 3),
+    description:
+        'A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved',
+  );
+
+  List<CastAndCrewProfile> castAndCrewProfiles = [
+    CastAndCrewProfile(
+        name: 'Kamal Hasan',
+        profilePicture: 'assets/images/kamal.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.cast),
+    CastAndCrewProfile(
+        name: 'Fahadh Fasil',
+        profilePicture: 'assets/images/fafa.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.cast),
+    CastAndCrewProfile(
+        name: 'Vijay Sethupathi',
+        profilePicture: 'assets/images/vjs.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.cast),
+    CastAndCrewProfile(
+        name: 'Suriya',
+        profilePicture: 'assets/images/suriya.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.cast),
+    CastAndCrewProfile(
+        name: 'Arjun Das',
+        profilePicture: 'assets/images/arjundas.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.cast),
+    CastAndCrewProfile(
+        name: 'Chemban Vinod',
+        profilePicture: 'assets/images/chembi.jpg',
+        designation: 'Actor',
+        associatedType: AssociatedType.cast),
+    CastAndCrewProfile(
+        name: 'Lokesh K',
+        profilePicture: 'assets/images/lokesh.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.crew),
+    CastAndCrewProfile(
+        name: 'Kamal Hasan',
+        profilePicture: 'assets/images/kamal.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.crew),
+    CastAndCrewProfile(
+        name: 'Rathna K',
+        profilePicture: 'assets/images/rathna.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.crew),
+    CastAndCrewProfile(
+        name: 'Anirudh R',
+        profilePicture: 'assets/images/anirudh.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.crew),
+    CastAndCrewProfile(
+        name: 'Girish G',
+        profilePicture: 'assets/images/girish.jpeg',
+        designation: 'Actor',
+        associatedType: AssociatedType.crew),
   ];
 
   List<Review> reviews = [
@@ -76,6 +129,35 @@ class _MyHomePageState extends State<MyHomePage> {
         date: DateTime(2022, 9, 13)),
   ];
 
+  late Movie movie = Movie(
+      name: name,
+      posters: posters,
+      additionalDetails: additionalDetails,
+      castAndCrewProfiles: castAndCrewProfiles,
+      reviews: reviews);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MovieWidget(movie: movie),
+    );
+  }
+}
+
+class MovieWidget extends StatefulWidget {
+  const MovieWidget({super.key, required this.movie});
+
+  final Movie movie;
+
+  @override
+  State<MovieWidget> createState() => _MovieWidgetState();
+}
+
+class _MovieWidgetState extends State<MovieWidget> {
   Widget getReviewWidgets(List<Review> reviewList) {
     List<Widget> list = <Widget>[];
     for (final review in reviewList) {
@@ -88,6 +170,31 @@ class _MyHomePageState extends State<MyHomePage> {
       ));
       list.add(const SizedBox(width: 24));
     }
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(children: list),
+    );
+  }
+
+  Widget getCastAndCrewProfileWidgets(
+      List<CastAndCrewProfile> castAndCrewProfiles,
+      AssociatedType associatedType) {
+    List<Widget> list = <Widget>[];
+    for (final castAndCrewProfile in castAndCrewProfiles) {
+      if (castAndCrewProfile.associatedType == associatedType) {
+        list.add(CastAndCrewProfileWidget(
+          name: castAndCrewProfile.name,
+          profilePicture: castAndCrewProfile.profilePicture,
+          designation: castAndCrewProfile.designation,
+        ));
+        list.add(
+          const SizedBox(
+            width: 8,
+          ),
+        );
+      }
+    }
+
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(children: list),
@@ -115,7 +222,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       autoPlay: true,
                       autoPlayAnimationDuration: const Duration(seconds: 4),
                       autoPlayInterval: const Duration(seconds: 4)),
-                  items: moviePosters.map((poster) {
+                  items: widget.movie.posters.map((poster) {
                     return Builder(
                       builder: (BuildContext context) {
                         return Container(
@@ -137,16 +244,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   }).toList(),
                 ),
                 MovieDetailsWidget(
-                  categories: const ['2D', 'TAMIL'],
-                  rating: 9.5,
-                  votes: 241500,
-                  runtime: '2h 53m',
-                  genres: const ['Action', 'Thriller'],
-                  censorCertificate: 'UA',
-                  releaseDate: DateTime(2022, 6, 3),
-                  description:
-                      'A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved',
-                ),
+                    categories: widget.movie.additionalDetails.categories,
+                    rating: widget.movie.additionalDetails.rating,
+                    votes: widget.movie.additionalDetails.votes,
+                    runtime: widget.movie.additionalDetails.runtime,
+                    genres: widget.movie.additionalDetails.genres,
+                    censorCertificate:
+                        widget.movie.additionalDetails.censorCertificate,
+                    releaseDate: widget.movie.additionalDetails.releaseDate,
+                    description: widget.movie.additionalDetails.description),
                 const Divider(
                   color: Color.fromRGBO(85, 85, 85, 1),
                 ),
@@ -168,58 +274,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 8,
                 ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: const [
-                        CastAndCrewProfileWidget(
-                          name: 'Kamal Hasan',
-                          profilePicture: 'assets/images/kamal.jpeg',
-                          designation: 'Actor',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Fahad Fasil',
-                          profilePicture: 'assets/images/fafa.jpeg',
-                          designation: 'Actor',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Vijay Sethupathi',
-                          profilePicture: 'assets/images/vjs.jpeg',
-                          designation: 'Actor',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Suriya',
-                          profilePicture: 'assets/images/suriya.jpeg',
-                          designation: 'Actor',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Arjun Das',
-                          profilePicture: 'assets/images/arjundas.jpeg',
-                          designation: 'Actor',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Chemban Vinod',
-                          profilePicture: 'assets/images/chembi.jpg',
-                          designation: 'Actor',
-                        ),
-                      ]),
-                ),
+                getCastAndCrewProfileWidgets(
+                    widget.movie.castAndCrewProfiles, AssociatedType.cast),
                 const SizedBox(
                   height: 12,
                 ),
@@ -244,49 +300,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 8,
                 ),
-                SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: const [
-                        CastAndCrewProfileWidget(
-                          name: 'Lokesh K',
-                          profilePicture: 'assets/images/lokesh.jpeg',
-                          designation: 'Director',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Kamal Hasan',
-                          profilePicture: 'assets/images/kamal.jpeg',
-                          designation: 'Producer',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Rathna',
-                          profilePicture: 'assets/images/rathna.jpeg',
-                          designation: 'Writer',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Anirudh',
-                          profilePicture: 'assets/images/anirudh.jpeg',
-                          designation: 'Music Director',
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        CastAndCrewProfileWidget(
-                          name: 'Girish G',
-                          profilePicture: 'assets/images/girish.jpeg',
-                          designation: 'DOP',
-                        ),
-                      ],
-                    )),
+                getCastAndCrewProfileWidgets(
+                    widget.movie.castAndCrewProfiles, AssociatedType.crew),
                 const SizedBox(
                   height: 12,
                 ),
@@ -334,7 +349,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 const SizedBox(
                   height: 8,
                 ),
-                getReviewWidgets(reviews),
+                getReviewWidgets(widget.movie.reviews),
                 const SizedBox(
                   height: 12,
                 ),
