@@ -1,3 +1,4 @@
+// Package Dependencies
 import 'package:flutter/material.dart';
 
 class SimilarMovieWidget extends StatelessWidget {

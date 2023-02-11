@@ -1,12 +1,15 @@
+// Package Dependencies
 import 'package:carousel_slider/carousel_slider.dart';
-
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/material.dart';
 
+// Widgets
 import 'MovieDetailsWidget.dart';
 import 'CastAndCrewProfileWidget.dart';
 import 'ReviewWidget.dart';
 import 'SimilarMovieWidget.dart';
 
+// Models
 import '../Models/Movie.dart';
 import '../Models/CastAndCrewProfile.dart';
 import '../Models/Review.dart';
@@ -64,6 +67,14 @@ class _MovieWidgetState extends State<MovieWidget> {
     );
   }
 
+  YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'OKBMCL-frPU',
+    flags: YoutubePlayerFlags(
+      autoPlay: true,
+      mute: false,
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +82,7 @@ class _MovieWidgetState extends State<MovieWidget> {
       child: Column(
         children: [
           Container(
-            margin: const EdgeInsets.fromLTRB(16, 32, 16, 16),
+            margin: const EdgeInsets.fromLTRB(16, 32, 16, 32),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -82,7 +93,6 @@ class _MovieWidgetState extends State<MovieWidget> {
                 CarouselSlider(
                   options: CarouselOptions(
                       enlargeCenterPage: true,
-                      autoPlay: true,
                       autoPlayAnimationDuration: const Duration(seconds: 4),
                       autoPlayInterval: const Duration(seconds: 4)),
                   items: widget.movie.posters.map((poster) {
@@ -280,7 +290,44 @@ class _MovieWidgetState extends State<MovieWidget> {
                           poster: 'assets/images/maanagaram.jpeg'),
                     ],
                   ),
-                )
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                const Divider(
+                  color: Color.fromRGBO(85, 85, 85, 1),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'Trailers',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(16.0),
+                  child: YoutubePlayerBuilder(
+                    player: YoutubePlayer(
+                      controller: _controller,
+                    ),
+                    builder: (context, player) {
+                      return Column(
+                        children: [player],
+                      );
+                    },
+                  ),
+                ),
               ],
             ),
           ),

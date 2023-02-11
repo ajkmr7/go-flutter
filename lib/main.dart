@@ -1,9 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
-
+// Package Dependencies
 import 'package:flutter/material.dart';
 
+// Widgets
 import './Widgets/MovieWidget.dart';
 
+// Models
 import './Models/Movie.dart';
 import './Models/MovieDetails.dart';
 import './Models/CastAndCrewProfile.dart';
@@ -16,16 +17,16 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  String name = 'Vikram';
+  final String name = 'Vikram';
 
-  List<String> posters = [
+  final List<String> posters = [
     'assets/images/carousel1.jpeg',
     'assets/images/carousel2.jpg',
     'assets/images/carousel3.jpeg',
     'assets/images/carousel4.jpeg',
   ];
 
-  MovieDetails additionalDetails = MovieDetails(
+  final MovieDetails additionalDetails = MovieDetails(
     rating: 9.5,
     votes: 241500,
     categories: ['2D', 'Tamil'],
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         'A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved',
   );
 
-  List<CastAndCrewProfile> castAndCrewProfiles = [
+  final List<CastAndCrewProfile> castAndCrewProfiles = [
     CastAndCrewProfile(
         name: 'Kamal Hasan',
         profilePicture: 'assets/images/kamal.jpeg',
@@ -95,7 +96,7 @@ class MyApp extends StatelessWidget {
         associatedType: AssociatedType.crew),
   ];
 
-  List<Review> reviews = [
+  final List<Review> reviews = [
     Review(
         reviewerName: 'Ajay',
         rating: 10,
@@ -126,7 +127,7 @@ class MyApp extends StatelessWidget {
         date: DateTime(2022, 9, 13)),
   ];
 
-  late Movie movie = Movie(
+  late final Movie movie = Movie(
       name: name,
       posters: posters,
       additionalDetails: additionalDetails,
