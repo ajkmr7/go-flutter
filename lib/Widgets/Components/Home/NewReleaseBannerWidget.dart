@@ -1,4 +1,5 @@
 // Package Dependencies
+import 'package:first_app/Widgets/Screens/TrailerWidget.dart';
 import 'package:flutter/material.dart';
 
 // Models
@@ -57,17 +58,30 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
     String appendedGenres = appendGenres(widget.movie.additionalDetails.genres);
     return Column(
       children: [
-        Stack(alignment: AlignmentDirectional.bottomEnd, children: [
-          FittedBox(
-            fit: BoxFit.fill,
-            child: Image.asset(widget.movie.posters.first),
-          ),
-          IconButton(
-            icon: const Icon(Icons.play_circle_outlined),
-            color: Colors.white,
-            onPressed: () => {},
-          )
-        ]),
+        InkWell(
+          onTap: () => {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => TrailerWidget(
+                    movieName: widget.movie.name,
+                    movieTrailerURLPath: widget.movie.trailerURLPath)))
+          },
+          child: Stack(alignment: AlignmentDirectional.bottomEnd, children: [
+            FittedBox(
+              fit: BoxFit.fill,
+              child: Image.asset(widget.movie.posters.first),
+            ),
+            IconButton(
+              icon: const Icon(Icons.play_circle_outlined),
+              color: Colors.white,
+              onPressed: () => {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => TrailerWidget(
+                        movieName: widget.movie.name,
+                        movieTrailerURLPath: widget.movie.trailerURLPath)))
+              },
+            )
+          ]),
+        ),
         const SizedBox(height: 12),
         Container(
           margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),

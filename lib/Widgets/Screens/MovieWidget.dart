@@ -324,6 +324,10 @@ class _MovieWidgetState extends State<MovieWidget> {
                   borderRadius: BorderRadius.circular(16.0),
                   child: YoutubePlayerBuilder(
                     player: YoutubePlayer(
+                      progressColors: ProgressBarColors(
+                          backgroundColor: Colors.white,
+                          playedColor: Colors.red[400],
+                          bufferedColor: Colors.grey),
                       controller: _controller,
                     ),
                     builder: (context, player) {

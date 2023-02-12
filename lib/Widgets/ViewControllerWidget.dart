@@ -224,9 +224,11 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: presentingAppBarWidget(_selectedIndex),
       body: presentingBodyWidget(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         selectedItemColor: Colors.red[400],
         unselectedItemColor: Colors.grey,
         selectedFontSize: 16,
