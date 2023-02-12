@@ -108,8 +108,6 @@ class _MovieWidgetState extends State<MovieWidget> {
                         return Container(
                           margin: const EdgeInsets.fromLTRB(8, 12, 8, 12),
                           child: Material(
-                            shadowColor: const Color.fromRGBO(0, 0, 0, 0.1),
-                            borderRadius: BorderRadius.circular(20),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(16.0),
                               child: FittedBox(

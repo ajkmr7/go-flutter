@@ -10,6 +10,7 @@ class Movie {
   List<CastAndCrewProfile> castAndCrewProfiles;
   List<Review> reviews;
   String trailerURLPath;
+  Map<String, dynamic> flags;
 
   Movie(
       {required this.name,
@@ -17,5 +18,6 @@ class Movie {
       required this.additionalDetails,
       required this.castAndCrewProfiles,
       required this.reviews,
-      required this.trailerURLPath});
+      required this.trailerURLPath,
+      required this.flags});
 }
