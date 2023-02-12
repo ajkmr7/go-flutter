@@ -4,15 +4,15 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/material.dart';
 
 // Widgets
-import 'MovieDetailsWidget.dart';
-import 'CastAndCrewProfileWidget.dart';
-import 'ReviewWidget.dart';
-import 'SimilarMovieWidget.dart';
+import '../Components/Movie/MovieDetailsWidget.dart';
+import '../Components/Movie/CastAndCrewProfileWidget.dart';
+import '../Components/Movie/ReviewWidget.dart';
+import '../Components/Movie/SimilarMovieWidget.dart';
 
 // Models
-import '../Models/Movie.dart';
-import '../Models/CastAndCrewProfile.dart';
-import '../Models/Review.dart';
+import '../../Models/Movie.dart';
+import '../../Models/CastAndCrewProfile.dart';
+import '../../Models/Review.dart';
 
 class MovieWidget extends StatefulWidget {
   const MovieWidget({super.key, required this.movie});
