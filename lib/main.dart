@@ -1,8 +1,6 @@
 // Package Dependencies
+import 'package:first_app/Widgets/ViewControllerWidget.dart';
 import 'package:flutter/material.dart';
-
-// Widgets
-import './Widgets/MovieWidget.dart';
 
 // Models
 import './Models/Movie.dart';
@@ -144,7 +142,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MovieWidget(movie: movie),
+      home: const ViewControllerWidget(),
     );
   }
 }

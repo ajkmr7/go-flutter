@@ -74,8 +74,10 @@ class _MovieWidgetState extends State<MovieWidget> {
     _controller = YoutubePlayerController(
       initialVideoId: widget.movie.trailerURLPath,
       flags: const YoutubePlayerFlags(
-        autoPlay: true,
+        controlsVisibleAtStart: true,
+        autoPlay: false,
         mute: false,
+        forceHD: true,
       ),
     );
   }
