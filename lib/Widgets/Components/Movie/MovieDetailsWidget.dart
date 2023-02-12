@@ -1,6 +1,5 @@
 // Package Dependencies
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class MovieDetailsWidget extends StatelessWidget {
   final double rating;
@@ -9,7 +8,7 @@ class MovieDetailsWidget extends StatelessWidget {
   final String runtime;
   final List<String> genres;
   final String censorCertificate;
-  final DateTime releaseDate;
+  final String releaseDate;
   final String description;
   const MovieDetailsWidget(
       {super.key,
@@ -84,14 +83,13 @@ class MovieDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String formattedReleaseDate = DateFormat.yMd().format(releaseDate);
     String appendedGenres = appendGenres(genres);
 
     List<String> additionalDetails = <String>[];
     additionalDetails.add(runtime);
     additionalDetails.add(appendedGenres);
     additionalDetails.add(censorCertificate);
-    additionalDetails.add(formattedReleaseDate);
+    additionalDetails.add(releaseDate);
 
     return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
       const SizedBox(

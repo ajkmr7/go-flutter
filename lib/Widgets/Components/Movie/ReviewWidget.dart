@@ -14,7 +14,7 @@ class ReviewWidget extends StatefulWidget {
   final int rating;
   final String reviewComments;
   final int likeCount;
-  final DateTime date;
+  final String date;
 
   @override
   State<ReviewWidget> createState() => _ReviewWidgetState();
@@ -52,12 +52,6 @@ class _ReviewWidgetState extends State<ReviewWidget> {
       }
       _isDisliked = !_isDisliked;
     });
-  }
-
-  String _daysInBetween(DateTime from, DateTime to) {
-    from = DateTime(from.year, from.month, from.day);
-    to = DateTime(to.year, to.month, to.day);
-    return (to.difference(from).inHours / 24).round().toString();
   }
 
   @override
@@ -177,7 +171,7 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                         onPressed: () => _toggleLike(),
                       ),
                       Text(
-                        '${likes}',
+                        '$likes',
                         style: const TextStyle(
                             color: Color.fromRGBO(85, 85, 85, 1),
                             fontSize: 10,
@@ -201,7 +195,7 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${_daysInBetween(widget.date, DateTime.now())} days ago',
+                        '${widget.date}',
                         style: const TextStyle(
                             color: Color.fromRGBO(85, 85, 85, 1),
                             fontSize: 10,

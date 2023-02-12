@@ -1,0 +1,1274 @@
+{
+    "movies":[
+      {
+        "name":"Vikram",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":true
+        }
+      },
+      {
+        "name":"Kaidhi",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Aruvi",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Master",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Thupakki",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Maanagaram",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":true
+        }
+      },
+      {
+        "name":"LEO",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Mankatha",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Jigarthanda",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      },
+      {
+        "name":"Vikram Vedha",
+        "posters":[
+          "assets/images/carousel1.jpeg",
+          "assets/images/carousel2.jpg",
+          "assets/images/carousel3.jpeg",
+          "assets/images/carousel4.jpeg"
+        ],
+        "additionalDetails":{
+          "rating":9.5,
+          "votes":241500,
+          "categories":[
+            "2D",
+            "Tamil"
+          ],
+          "runtime":"2h 53m",
+          "genres":[
+            "Action",
+            "Thriller"
+          ],
+          "censorCertificate":"UA",
+          "releaseDate":"2022-06-02T22:30:00.000Z",
+          "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "castAndCrewProfiles":[
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Fahadh Fasil",
+            "profilePicture":"assets/images/fafa.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Vijay Sethupathi",
+            "profilePicture":"assets/images/vjs.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Suriya",
+            "profilePicture":"assets/images/suriya.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Arjun Das",
+            "profilePicture":"assets/images/arjundas.jpeg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Chemban Vinod",
+            "profilePicture":"assets/images/chembi.jpg",
+            "designation":"Actor",
+            "associatedType":"Cast"
+          },
+          {
+            "name":"Lokesh K",
+            "profilePicture":"assets/images/lokesh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Kamal Hasan",
+            "profilePicture":"assets/images/kamal.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Rathna",
+            "profilePicture":"assets/images/rathna.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Anirudh",
+            "profilePicture":"assets/images/anirudh.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          },
+          {
+            "name":"Girish G",
+            "profilePicture":"assets/images/girish.jpeg",
+            "designation":"Actor",
+            "associatedType":"Crew"
+          }
+        ],
+        "reviews":[
+          {
+            "username":"Ajay",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":123,
+            "date":"2022-06-02T22:30:00.000Z"
+          },
+          {
+            "username":"Deepak",
+            "rating":9,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":99,
+            "date":"2023-01-01T12:30:00.000Z"
+          },
+          {
+            "username":"Arun",
+            "rating":10,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":144,
+            "date":"2022-09-10T11:30:00.000Z"
+          },
+          {
+            "username":"Hari",
+            "rating":8,
+            "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+            "likeCount":86,
+            "date":"2022-07-03T06:30:00.000Z"
+          }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+          "isNewRelease":false
+        }
+      }
+    ]
+  }

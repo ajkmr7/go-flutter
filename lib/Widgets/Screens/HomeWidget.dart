@@ -8,7 +8,7 @@ import '../Components/Home/NewReleaseBannerWidget.dart';
 import '../../Models/Movie.dart';
 
 class HomeWidget extends StatefulWidget {
-  final List<Movie> movies;
+  final Movies movies;
   const HomeWidget({super.key, required this.movies});
 
   @override
@@ -16,9 +16,9 @@ class HomeWidget extends StatefulWidget {
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
-  Movie? getNewReleasedMovie(List<Movie> movies) {
-    for (final movie in movies) {
-      if (movie.flags["isNewRelease"] == true) {
+  Movie? getNewReleasedMovie(Movies movies) {
+    for (final movie in movies.movies) {
+      if (movie.flags.isNewRelease == true) {
         return movie;
       }
     }
