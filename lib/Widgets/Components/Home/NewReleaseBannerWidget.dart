@@ -69,7 +69,7 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
           child: Stack(alignment: AlignmentDirectional.bottomEnd, children: [
             FittedBox(
               fit: BoxFit.fill,
-              child: Image.asset(widget.movie.posters.first),
+              child: Image.asset(widget.movie.carouselImages.first),
             ),
             IconButton(
               icon: const Icon(Icons.play_circle_outlined),
@@ -173,7 +173,7 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
               ],
             ),
           ),
-        )
+        ),
       ],
     );
   }

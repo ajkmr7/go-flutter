@@ -30,13 +30,43 @@ class _HomeWidgetState extends State<HomeWidget> {
     Movie? newReleaseMovie = getNewReleasedMovie(widget.movies);
     return Container(
       margin: const EdgeInsets.fromLTRB(0, 0, 0, 16),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          newReleaseMovie != null
-              ? NewReleaseBannerWidget(movie: newReleaseMovie)
-              : Container(),
-        ],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            newReleaseMovie != null
+                ? NewReleaseBannerWidget(movie: newReleaseMovie)
+                : Container(),
+            const SizedBox(
+              height: 12,
+            ),
+            const Divider(
+              color: Color.fromRGBO(85, 85, 85, 1),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Now Showing',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+          ],
+        ),
       ),
     );
   }

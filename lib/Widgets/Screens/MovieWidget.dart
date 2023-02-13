@@ -2,15 +2,18 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
 
 // Widgets
 import '../Components/Movie/MovieDetailsWidget.dart';
 import '../Components/Movie/CastAndCrewProfileWidget.dart';
 import '../Components/Movie/ReviewWidget.dart';
-import '../Components/Movie/SimilarMovieWidget.dart';
+import '../Components/Movie/MoviePosterWidget.dart';
 
 // Models
 import '../../Models/Movie.dart';
+import '../../Models/CastAndCrewProfile.dart';
 
 class MovieWidget extends StatefulWidget {
   const MovieWidget({super.key, required this.movie});
@@ -23,6 +26,14 @@ class MovieWidget extends StatefulWidget {
 
 class _MovieWidgetState extends State<MovieWidget> {
   late YoutubePlayerController _controller;
+
+  Future<CastAndCrewProfiles> parseCastAndCrewProfilesJSON() async {
+    final String response = await rootBundle
+        .loadString('assets/mocks/Movies/${widget.movie.id}.json');
+    var data = json.decode(response);
+    var castAndCrewProfiles = CastAndCrewProfiles.fromJson(data);
+    return castAndCrewProfiles;
+  }
 
   Widget getReviewWidgets(List<Review> reviewList) {
     List<Widget> list = <Widget>[];
@@ -43,9 +54,9 @@ class _MovieWidgetState extends State<MovieWidget> {
   }
 
   Widget getCastAndCrewProfileWidgets(
-      List<CastAndCrewProfile> castAndCrewProfiles, associatedType) {
+      CastAndCrewProfiles castAndCrewProfiles, associatedType) {
     List<Widget> list = <Widget>[];
-    for (final castAndCrewProfile in castAndCrewProfiles) {
+    for (final castAndCrewProfile in castAndCrewProfiles.castAndCrewProfiles) {
       if (castAndCrewProfile.associatedType == associatedType) {
         list.add(CastAndCrewProfileWidget(
           name: castAndCrewProfile.name,
@@ -113,7 +124,7 @@ class _MovieWidgetState extends State<MovieWidget> {
                           autoPlay: true,
                           autoPlayAnimationDuration: const Duration(seconds: 4),
                           autoPlayInterval: const Duration(seconds: 4)),
-                      items: widget.movie.posters.map((poster) {
+                      items: widget.movie.carouselImages.map((poster) {
                         return Builder(
                           builder: (BuildContext context) {
                             return Container(
@@ -164,8 +175,39 @@ class _MovieWidgetState extends State<MovieWidget> {
                     const SizedBox(
                       height: 8,
                     ),
-                    getCastAndCrewProfileWidgets(
-                        widget.movie.castAndCrewProfiles, "Cast"),
+                    FutureBuilder<CastAndCrewProfiles>(
+                      future: parseCastAndCrewProfilesJSON(),
+                      builder: (
+                        BuildContext context,
+                        AsyncSnapshot<CastAndCrewProfiles> snapshot,
+                      ) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          const Center(
+                              child:
+                                  CircularProgressIndicator(color: Colors.red));
+                        } else if (snapshot.connectionState ==
+                            ConnectionState.done) {
+                          if (snapshot.hasData) {
+                            return getCastAndCrewProfileWidgets(
+                                snapshot.data!, "Cast");
+                          } else if (snapshot.hasError) {
+                            Center(
+                              child: Text(snapshot.error.toString()),
+                            );
+                          } else {
+                            const Center(
+                              child: Text("Empty Data"),
+                            );
+                          }
+                        } else {
+                          return Center(
+                              child:
+                                  Text('State: ${snapshot.connectionState}'));
+                        }
+                        return Container();
+                      },
+                    ),
                     const SizedBox(
                       height: 12,
                     ),
@@ -190,8 +232,39 @@ class _MovieWidgetState extends State<MovieWidget> {
                     const SizedBox(
                       height: 8,
                     ),
-                    getCastAndCrewProfileWidgets(
-                        widget.movie.castAndCrewProfiles, "Crew"),
+                    FutureBuilder<CastAndCrewProfiles>(
+                      future: parseCastAndCrewProfilesJSON(),
+                      builder: (
+                        BuildContext context,
+                        AsyncSnapshot<CastAndCrewProfiles> snapshot,
+                      ) {
+                        if (snapshot.connectionState ==
+                            ConnectionState.waiting) {
+                          const Center(
+                              child:
+                                  CircularProgressIndicator(color: Colors.red));
+                        } else if (snapshot.connectionState ==
+                            ConnectionState.done) {
+                          if (snapshot.hasData) {
+                            return getCastAndCrewProfileWidgets(
+                                snapshot.data!, "Crew");
+                          } else if (snapshot.hasError) {
+                            Center(
+                              child: Text(snapshot.error.toString()),
+                            );
+                          } else {
+                            const Center(
+                              child: Text("Empty Data"),
+                            );
+                          }
+                        } else {
+                          return Center(
+                              child:
+                                  Text('State: ${snapshot.connectionState}'));
+                        }
+                        return Container();
+                      },
+                    ),
                     const SizedBox(
                       height: 12,
                     ),
@@ -292,19 +365,19 @@ class _MovieWidgetState extends State<MovieWidget> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: const [
-                          SimilarMovieWidget(
+                          MoviePosterWidget(
                               name: "Kaithi",
                               poster: 'assets/images/kaithi.jpg'),
                           SizedBox(
                             width: 16,
                           ),
-                          SimilarMovieWidget(
+                          MoviePosterWidget(
                               name: "Master",
                               poster: 'assets/images/master.jpeg'),
                           SizedBox(
                             width: 16,
                           ),
-                          SimilarMovieWidget(
+                          MoviePosterWidget(
                               name: "Maanagaram",
                               poster: 'assets/images/maanagaram.jpeg'),
                         ],

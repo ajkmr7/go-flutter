@@ -1,0 +1,613 @@
+{
+  "movies":[
+     {
+        "id":"f5fa9f8c-ab7f-11ed-afa1-0242ac120002",
+        "name":"Vikram",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":true
+        }
+     },
+     {
+        "id":"f5faa22a-ab7f-11ed-afa1-0242ac120002",
+        "name":"Kaithi",
+        "carouselImages":[
+           "assets/images/kaithi/carousel1.jpg",
+           "assets/images/kaithi/carousel2.jpg",
+           "assets/images/kaithi/carousel3.jpeg"
+        ],
+        "poster":"assets/images/kaithi/poster.jpeg",
+        "additionalDetails":{
+           "rating":7.9,
+           "votes":120300,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 26m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2019-10-25T22:30:00.000Z",
+           "description":"A group of cops confiscate a record amount of drugs but find themselves in danger of the mafia. The injured inspector then takes the help of a life term prisoner, who is out on parole to meet his daughter. Will he be able to save the day?"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faabf8-ab7f-11ed-afa1-0242ac120002",
+        "name":"Aruvi",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faa374-ab7f-11ed-afa1-0242ac120002",
+        "name":"Master",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faa4be-ab7f-11ed-afa1-0242ac120002",
+        "name":"Thupakki",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faad1a-ab7f-11ed-afa1-0242ac120002",
+        "name":"Maanagaram",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":true
+        }
+     },
+     {
+        "id":"f5faa5fe-ab7f-11ed-afa1-0242ac120002",
+        "name":"LEO",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faa72a-ab7f-11ed-afa1-0242ac120002",
+        "name":"Mankatha",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faa996-ab7f-11ed-afa1-0242ac120002",
+        "name":"Jigarthanda",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     },
+     {
+        "id":"f5faaacc-ab7f-11ed-afa1-0242ac120002",
+        "name":"Vikram Vedha",
+        "carouselImages":[
+           "assets/images/vikram/carousel1.jpeg",
+           "assets/images/vikram/carousel2.jpg",
+           "assets/images/vikram/carousel3.jpeg",
+           "assets/images/vikram/carousel4.jpeg"
+        ],
+        "poster":"assets/images/vikram/poster.jpeg",
+        "additionalDetails":{
+           "rating":9.5,
+           "votes":241500,
+           "categories":[
+              "2D",
+              "Tamil"
+           ],
+           "runtime":"2h 53m",
+           "genres":[
+              "Action",
+              "Thriller"
+           ],
+           "censorCertificate":"UA",
+           "releaseDate":"2022-06-02T22:30:00.000Z",
+           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
+        },
+        "reviews":[
+           {
+              "username":"Ajay",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":123,
+              "date":"2022-06-02T22:30:00.000Z"
+           },
+           {
+              "username":"Deepak",
+              "rating":9,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":99,
+              "date":"2023-01-01T12:30:00.000Z"
+           },
+           {
+              "username":"Arun",
+              "rating":10,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":144,
+              "date":"2022-09-10T11:30:00.000Z"
+           },
+           {
+              "username":"Hari",
+              "rating":8,
+              "comments":"This is entirely a Lokesh Kanagaraj film. He is cooking something big LCU",
+              "likeCount":86,
+              "date":"2022-07-03T06:30:00.000Z"
+           }
+        ],
+        "trailerURLPath":"OKBMCL-frPU",
+        "flags":{
+           "isNewRelease":false
+        }
+     }
+  ]
+}

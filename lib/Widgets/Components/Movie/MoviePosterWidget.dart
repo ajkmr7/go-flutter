@@ -1,10 +1,10 @@
 // Package Dependencies
 import 'package:flutter/material.dart';
 
-class SimilarMovieWidget extends StatelessWidget {
+class MoviePosterWidget extends StatelessWidget {
   final String poster;
   final String name;
-  const SimilarMovieWidget(
+  const MoviePosterWidget(
       {super.key, required this.name, required this.poster});
 
   @override

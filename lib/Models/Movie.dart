@@ -14,41 +14,39 @@ class Movies {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['movies'] = movies.map((v) => v.toJson()).toList();
+    data['movies'] = movies.map((movie) => movie.toJson()).toList();
     return data;
   }
 }
 
 class Movie {
+  late String id;
   late String name;
-  late List<String> posters;
+  late List<String> carouselImages;
+  late String poster;
   late AdditionalDetails additionalDetails;
-  late List<CastAndCrewProfile> castAndCrewProfiles;
   late List<Review> reviews;
   late String trailerURLPath;
   late Flags flags;
 
   Movie(
-      {required this.name,
-      required this.posters,
+      {required this.id,
+      required this.name,
+      required this.carouselImages,
+      required this.poster,
       required this.additionalDetails,
-      required this.castAndCrewProfiles,
       required this.reviews,
       required this.trailerURLPath,
       required this.flags});
 
   Movie.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
     name = json['name'];
-    posters = json['posters'].cast<String>();
+    carouselImages = json['carouselImages'].cast<String>();
+    poster = json['poster'];
     additionalDetails = (json['additionalDetails'] != null
         ? AdditionalDetails.fromJson(json['additionalDetails'])
         : null)!;
-    if (json['castAndCrewProfiles'] != null) {
-      castAndCrewProfiles = <CastAndCrewProfile>[];
-      json['castAndCrewProfiles'].forEach((v) {
-        castAndCrewProfiles.add(CastAndCrewProfile.fromJson(v));
-      });
-    }
     if (json['reviews'] != null) {
       reviews = <Review>[];
       json['reviews'].forEach((v) {
@@ -61,11 +59,11 @@ class Movie {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
     data['name'] = name;
-    data['posters'] = posters;
+    data['carouselImages'] = carouselImages;
+    data['poster'] = poster;
     data['additionalDetails'] = additionalDetails.toJson();
-    data['castAndCrewProfiles'] =
-        castAndCrewProfiles.map((v) => v.toJson()).toList();
     data['reviews'] = reviews.map((v) => v.toJson()).toList();
     data['trailerURLPath'] = trailerURLPath;
     data['flags'] = flags.toJson();
@@ -114,35 +112,6 @@ class AdditionalDetails {
     data['censorCertificate'] = censorCertificate;
     data['releaseDate'] = releaseDate;
     data['description'] = description;
-    return data;
-  }
-}
-
-class CastAndCrewProfile {
-  late String name;
-  late String profilePicture;
-  late String designation;
-  late String associatedType;
-
-  CastAndCrewProfile(
-      {required this.name,
-      required this.profilePicture,
-      required this.designation,
-      required this.associatedType});
-
-  CastAndCrewProfile.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    profilePicture = json['profilePicture'];
-    designation = json['designation'];
-    associatedType = json['associatedType'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['name'] = name;
-    data['profilePicture'] = profilePicture;
-    data['designation'] = designation;
-    data['associatedType'] = associatedType;
     return data;
   }
 }

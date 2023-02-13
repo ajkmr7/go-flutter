@@ -19,7 +19,8 @@ class ViewControllerWidget extends StatefulWidget {
 
 class _ViewControllerWidgetState extends State<ViewControllerWidget> {
   Future<Movies> parseMoviesJSON() async {
-    final String response = await rootBundle.loadString('assets/Movies.json');
+    final String response =
+        await rootBundle.loadString('assets/mocks/Movies/NowShowing.json');
     var data = json.decode(response);
     var movies = Movies.fromJson(data);
     return movies;
