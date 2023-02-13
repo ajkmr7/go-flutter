@@ -364,23 +364,7 @@ class _MovieWidgetState extends State<MovieWidget> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
-                          MoviePosterWidget(
-                              name: "Kaithi",
-                              poster: 'assets/images/kaithi.jpg'),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          MoviePosterWidget(
-                              name: "Master",
-                              poster: 'assets/images/master.jpeg'),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          MoviePosterWidget(
-                              name: "Maanagaram",
-                              poster: 'assets/images/maanagaram.jpeg'),
-                        ],
+                        children: const [],
                       ),
                     ),
                     const SizedBox(

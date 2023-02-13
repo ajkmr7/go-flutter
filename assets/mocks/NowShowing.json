@@ -9,7 +9,7 @@
            "assets/images/vikram/carousel3.jpeg",
            "assets/images/vikram/carousel4.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/vikram/poster.jpg",
         "additionalDetails":{
            "rating":9.5,
            "votes":241500,
@@ -69,7 +69,7 @@
            "assets/images/kaithi/carousel2.jpg",
            "assets/images/kaithi/carousel3.jpeg"
         ],
-        "poster":"assets/images/kaithi/poster.jpeg",
+        "poster":"assets/images/kaithi/poster.jpg",
         "additionalDetails":{
            "rating":7.9,
            "votes":120300,
@@ -116,7 +116,7 @@
               "date":"2022-07-03T06:30:00.000Z"
            }
         ],
-        "trailerURLPath":"OKBMCL-frPU",
+        "trailerURLPath":"g79CvhHaj5I",
         "flags":{
            "isNewRelease":false
         }
@@ -125,28 +125,26 @@
         "id":"f5faabf8-ab7f-11ed-afa1-0242ac120002",
         "name":"Aruvi",
         "carouselImages":[
-           "assets/images/vikram/carousel1.jpeg",
-           "assets/images/vikram/carousel2.jpg",
-           "assets/images/vikram/carousel3.jpeg",
-           "assets/images/vikram/carousel4.jpeg"
+           "assets/images/aruvi/carousel1.jpeg",
+           "assets/images/aruvi/carousel2.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/aruvi/poster.png",
         "additionalDetails":{
-           "rating":9.5,
-           "votes":241500,
+           "rating":9.2,
+           "votes":1000,
            "categories":[
               "2D",
               "Tamil"
            ],
            "runtime":"2h 53m",
            "genres":[
-              "Action",
+              "Drama",
               "Thriller"
            ],
            "censorCertificate":"UA",
-           "releaseDate":"2022-06-02T22:30:00.000Z",
-           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
-        },
+           "releaseDate":"2017-12-15T22:30:00.000Z",
+           "description":"Finding it hard to fit into the confines of a society that has treated her unfairly, a mild-mannered yet spirited girl decides to break bad and rebel against the oppressive forces. Her audacity to vent out is not without consequences, and what unfolds from this point forms the crux of Aruvi, which is at once a socio-political drama and a complex character study."
+         },
         "reviews":[
            {
               "username":"Ajay",
@@ -177,7 +175,7 @@
               "date":"2022-07-03T06:30:00.000Z"
            }
         ],
-        "trailerURLPath":"OKBMCL-frPU",
+        "trailerURLPath":"jgYYxs_d_bo",
         "flags":{
            "isNewRelease":false
         }
@@ -186,29 +184,28 @@
         "id":"f5faa374-ab7f-11ed-afa1-0242ac120002",
         "name":"Master",
         "carouselImages":[
-           "assets/images/vikram/carousel1.jpeg",
-           "assets/images/vikram/carousel2.jpg",
-           "assets/images/vikram/carousel3.jpeg",
-           "assets/images/vikram/carousel4.jpeg"
+           "assets/images/master/carousel1.jpeg",
+           "assets/images/master/carousel2.jpeg",
+           "assets/images/master/carousel3.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/master/poster.jpeg",
         "additionalDetails":{
-           "rating":9.5,
-           "votes":241500,
+           "rating":7.5,
+           "votes":364100,
            "categories":[
-              "2D",
-              "Tamil"
+              "2D, IMAX 2D",
+              "Tamil, Telugu"
            ],
-           "runtime":"2h 53m",
+           "runtime":"2h 58m",
            "genres":[
               "Action",
               "Thriller"
            ],
            "censorCertificate":"UA",
-           "releaseDate":"2022-06-02T22:30:00.000Z",
-           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
-        },
-        "reviews":[
+           "releaseDate":"2021-01-13T22:30:00.000Z",
+           "description":"An alcoholic professor is sent to a juvenile school, where he clashes with a gangster, who uses the children of the school for criminal activities."
+         },
+         "reviews":[
            {
               "username":"Ajay",
               "rating":10,
@@ -238,37 +235,36 @@
               "date":"2022-07-03T06:30:00.000Z"
            }
         ],
-        "trailerURLPath":"OKBMCL-frPU",
+        "trailerURLPath":"UTiXQcrLlv4",
         "flags":{
            "isNewRelease":false
         }
      },
      {
         "id":"f5faa4be-ab7f-11ed-afa1-0242ac120002",
-        "name":"Thupakki",
+        "name":"Thuppaki",
         "carouselImages":[
-           "assets/images/vikram/carousel1.jpeg",
-           "assets/images/vikram/carousel2.jpg",
-           "assets/images/vikram/carousel3.jpeg",
-           "assets/images/vikram/carousel4.jpeg"
+           "assets/images/thuppaki/carousel1.jpeg",
+           "assets/images/thuppaki/carousel2.jpeg",
+           "assets/images/thuppaki/carousel3.jpg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/thuppaki/poster.jpeg",
         "additionalDetails":{
-           "rating":9.5,
-           "votes":241500,
+           "rating":7.9,
+           "votes":180000,
            "categories":[
               "2D",
-              "Tamil"
+              "Tamil, Telugu"
            ],
            "runtime":"2h 53m",
            "genres":[
               "Action",
               "Thriller"
            ],
-           "censorCertificate":"UA",
-           "releaseDate":"2022-06-02T22:30:00.000Z",
-           "description":"A high-octane action film where a special investigator is assigned a case of serial killings. As the investigation proceeds, he finds the case is not what it seems to be and leading down this path is only going to end in a war between everyone involved"
-        },
+           "censorCertificate":"U",
+           "releaseDate":"2022-11-13T22:30:00.000Z",
+           "description":"Jagadish, a captain in the Indian Army, goes on a self-mission to track down and destroy an Islamic terrorist organization and deactivate the sleeper cells under its command."
+         },
         "reviews":[
            {
               "username":"Ajay",
@@ -299,7 +295,7 @@
               "date":"2022-07-03T06:30:00.000Z"
            }
         ],
-        "trailerURLPath":"OKBMCL-frPU",
+        "trailerURLPath":"aW_j4pNvG98",
         "flags":{
            "isNewRelease":false
         }
@@ -313,7 +309,7 @@
            "assets/images/vikram/carousel3.jpeg",
            "assets/images/vikram/carousel4.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/vikram/poster.jpg",
         "additionalDetails":{
            "rating":9.5,
            "votes":241500,
@@ -362,7 +358,7 @@
         ],
         "trailerURLPath":"OKBMCL-frPU",
         "flags":{
-           "isNewRelease":true
+           "isNewRelease":false
         }
      },
      {
@@ -374,7 +370,7 @@
            "assets/images/vikram/carousel3.jpeg",
            "assets/images/vikram/carousel4.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/vikram/poster.jpg",
         "additionalDetails":{
            "rating":9.5,
            "votes":241500,
@@ -435,7 +431,7 @@
            "assets/images/vikram/carousel3.jpeg",
            "assets/images/vikram/carousel4.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/vikram/poster.jpg",
         "additionalDetails":{
            "rating":9.5,
            "votes":241500,
@@ -496,7 +492,7 @@
            "assets/images/vikram/carousel3.jpeg",
            "assets/images/vikram/carousel4.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/vikram/poster.jpg",
         "additionalDetails":{
            "rating":9.5,
            "votes":241500,
@@ -557,7 +553,7 @@
            "assets/images/vikram/carousel3.jpeg",
            "assets/images/vikram/carousel4.jpeg"
         ],
-        "poster":"assets/images/vikram/poster.jpeg",
+        "poster":"assets/images/vikram/poster.jpg",
         "additionalDetails":{
            "rating":9.5,
            "votes":241500,

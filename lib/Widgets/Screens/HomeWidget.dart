@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Widgets
 import '../Components/Home/NewReleaseBannerWidget.dart';
+import 'package:first_app/Widgets/Components/Home/MoviePostersWidget.dart';
 
 // Models
 import '../../Models/Movie.dart';
@@ -53,10 +54,10 @@ class _HomeWidgetState extends State<HomeWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: const [
                   Text(
-                    'Now Showing',
+                    'NOW SHOWING',
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 14,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -65,6 +66,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             const SizedBox(
               height: 12,
             ),
+            MoviePostersWidget(movies: widget.movies),
           ],
         ),
       ),

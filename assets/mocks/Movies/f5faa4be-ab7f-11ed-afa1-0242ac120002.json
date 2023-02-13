@@ -1,0 +1,46 @@
+{
+    "castAndCrewProfiles":[
+       {
+          "id":"408969fe-ab83-11ed-afa1-0242ac120002",
+          "name":"Vijay",
+          "profilePicture":"assets/images/castandcrew/vijay.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40896b20-ab83-11ed-afa1-0242ac120002",
+          "name":"Vidyut Jamwal",
+          "profilePicture":"assets/images/castandcrew/vidyut.jpg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40896e86-ab83-11ed-afa1-0242ac120002",
+          "name":"Kajal Agarwal",
+          "profilePicture":"assets/images/castandcrew/kajal.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+        "id":"40894cbc-ab83-11ed-afa1-0242ac120002",
+        "name":"A R Murugadoss",
+        "profilePicture":"assets/images/castandcrew/arm.jpg",
+        "designation":"Director",
+        "associatedType":"Crew"
+       },
+       {
+          "id":"408970c0-ab83-11ed-afa1-0242ac120002",
+          "name":"S thanu",
+          "profilePicture":"assets/images/castandcrew/thanu.jpeg",
+          "designation":"Producer",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40895216-ab83-11ed-afa1-0242ac120002",
+          "name":"Harris Jayaraj",
+          "profilePicture":"assets/images/castandcrew/harris.jpg",
+          "designation":"Music Director",
+          "associatedType":"Crew"
+       }
+    ]
+ }
