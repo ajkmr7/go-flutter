@@ -9,8 +9,9 @@ import 'package:first_app/Widgets/Components/Home/MoviePostersWidget.dart';
 import '../../Models/Movie.dart';
 
 class HomeWidget extends StatefulWidget {
-  final Movies movies;
-  const HomeWidget({super.key, required this.movies});
+  final Movies nowShowing, comingSoon;
+  const HomeWidget(
+      {super.key, required this.nowShowing, required this.comingSoon});
 
   @override
   State<HomeWidget> createState() => _HomeWidgetState();
@@ -28,7 +29,7 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   @override
   Widget build(BuildContext context) {
-    Movie? newReleaseMovie = getNewReleasedMovie(widget.movies);
+    Movie? newReleaseMovie = getNewReleasedMovie(widget.nowShowing);
     return Container(
       margin: const EdgeInsets.fromLTRB(0, 0, 0, 16),
       child: SingleChildScrollView(
@@ -49,7 +50,7 @@ class _HomeWidgetState extends State<HomeWidget> {
               height: 12,
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+              margin: const EdgeInsets.fromLTRB(16, 0, 0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: const [
@@ -66,7 +67,35 @@ class _HomeWidgetState extends State<HomeWidget> {
             const SizedBox(
               height: 12,
             ),
-            MoviePostersWidget(movies: widget.movies),
+            MoviePostersWidget(movies: widget.nowShowing),
+            const SizedBox(
+              height: 12,
+            ),
+            const Divider(
+              color: Color.fromRGBO(85, 85, 85, 1),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Container(
+              margin: const EdgeInsets.fromLTRB(16, 0, 0, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: const [
+                  Text(
+                    'COMING SOON',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            MoviePostersWidget(movies: widget.comingSoon),
           ],
         ),
       ),

@@ -18,9 +18,17 @@ class ViewControllerWidget extends StatefulWidget {
 }
 
 class _ViewControllerWidgetState extends State<ViewControllerWidget> {
-  Future<Movies> parseMoviesJSON() async {
+  Future<Movies> parseNowShowingJSON() async {
     final String response =
         await rootBundle.loadString('assets/mocks/NowShowing.json');
+    var data = json.decode(response);
+    var movies = Movies.fromJson(data);
+    return movies;
+  }
+
+  Future<Movies> parseComingSoonJSON() async {
+    final String response =
+        await rootBundle.loadString('assets/mocks/ComingSoon.json');
     var data = json.decode(response);
     var movies = Movies.fromJson(data);
     return movies;
@@ -96,17 +104,19 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
   Widget? presentingBodyWidget(int index) {
     switch (index) {
       case 0:
-        return FutureBuilder<Movies>(
-          future: parseMoviesJSON(),
+        return FutureBuilder<List<Movies>>(
+          future: Future.wait([parseNowShowingJSON(), parseComingSoonJSON()]),
           builder: (
             BuildContext context,
-            AsyncSnapshot<Movies> snapshot,
+            AsyncSnapshot<List<Movies>> snapshot,
           ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               const Center(child: CircularProgressIndicator(color: Colors.red));
             } else if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.hasData) {
-                return HomeWidget(movies: snapshot.data!);
+                return HomeWidget(
+                    nowShowing: snapshot.data![0],
+                    comingSoon: snapshot.data![1]);
               } else if (snapshot.hasError) {
                 Center(
                   child: Text(snapshot.error.toString()),
