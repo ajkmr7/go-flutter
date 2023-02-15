@@ -1,14 +1,16 @@
 // Package Dependencies
-import 'package:first_app/Resources/Constants+Extensions.dart';
-import 'package:first_app/Widgets/Screens/MovieWidget.dart';
-import 'package:first_app/Widgets/Screens/TrailerWidget.dart';
 import 'package:flutter/material.dart';
 
 // Constants
 import 'package:first_app/Resources/Constants.dart';
+import 'package:first_app/Resources/Constants+Extensions.dart';
 
 // Models
 import '../../../Models/Movie.dart';
+
+// Widgets
+import 'package:first_app/Widgets/Screens/MovieWidget.dart';
+import 'package:first_app/Widgets/Screens/TrailerWidget.dart';
 
 class NewReleaseBannerWidget extends StatefulWidget {
   final Movie movie;

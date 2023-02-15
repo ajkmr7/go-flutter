@@ -1,16 +1,16 @@
 // Package Dependencies
-import 'package:first_app/Resources/Constants+Extensions.dart';
-import 'package:first_app/Widgets/Screens/MovieWidget.dart';
 import 'package:flutter/material.dart';
 
 // Constants
 import 'package:first_app/Resources/Constants.dart';
+import 'package:first_app/Resources/Constants+Extensions.dart';
 
 // Models
 import '../../../Models/Movie.dart';
 
 // Widgets
 import '../../Screens/TrailerWidget.dart';
+import 'package:first_app/Widgets/Screens/MovieWidget.dart';
 
 class MoviePosterWidget extends StatelessWidget {
   final Movie movie;

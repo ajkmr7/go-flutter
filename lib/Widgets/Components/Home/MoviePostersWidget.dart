@@ -1,5 +1,7 @@
-// Package Dependencies
+// Constants
 import 'package:first_app/Resources/Constants.dart';
+
+// Package Dependencies
 import 'package:first_app/Widgets/Components/Movie/MoviePosterWidget.dart';
 import 'package:flutter/material.dart';
 

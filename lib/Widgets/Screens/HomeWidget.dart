@@ -1,5 +1,4 @@
 // Package Dependencies
-import 'package:first_app/Resources/Constants.dart';
 import 'package:flutter/material.dart';
 
 // Widgets
@@ -8,6 +7,9 @@ import 'package:first_app/Widgets/Components/Home/MoviePostersWidget.dart';
 
 // Models
 import '../../Models/Movie.dart';
+
+// Constants
+import 'package:first_app/Resources/Constants.dart';
 
 class HomeWidget extends StatefulWidget {
   final Movies movies;
