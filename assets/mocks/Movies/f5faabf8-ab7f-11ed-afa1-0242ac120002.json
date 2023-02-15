@@ -1,0 +1,46 @@
+{
+    "castAndCrewProfiles":[
+       {
+          "id":"408961fc-ab83-11ed-afa1-0242ac120002",
+          "name":"Aditi Balan",
+          "profilePicture":"assets/images/castandcrew/aditi.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40896300-ab83-11ed-afa1-0242ac120002",
+          "name":"Lakshmi",
+          "profilePicture":"assets/images/castandcrew/lakshmi.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"4089653a-ab83-11ed-afa1-0242ac120002",
+          "name":"Mohammad Ali Baig",
+          "profilePicture":"assets/images/castandcrew/mohammad.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+        "id":"4089674c-ab83-11ed-afa1-0242ac120002",
+        "name":"Arun Prabhu P",
+        "profilePicture":"assets/images/castandcrew/arun.jpeg",
+        "designation":"Director",
+        "associatedType":"Crew"
+       },
+       {
+          "id":"40895a72-ab83-11ed-afa1-0242ac120002",
+          "name":"S R Prabhu",
+          "profilePicture":"assets/images/castandcrew/srprabhu.jpeg",
+          "designation":"Producer",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40896864-ab83-11ed-afa1-0242ac120002",
+          "name":"Vedanth Bharadwaj",
+          "profilePicture":"assets/images/castandcrew/vedant.jpeg",
+          "designation":"Music Director",
+          "associatedType":"Crew"
+       }
+    ]
+ }

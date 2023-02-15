@@ -1,0 +1,67 @@
+{
+    "castAndCrewProfiles":[
+       {
+          "id":"40895464-ab83-11ed-afa1-0242ac120002",
+          "name":"Karthi",
+          "profilePicture":"assets/images/castandcrew/karthi.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"4089557c-ab83-11ed-afa1-0242ac120002",
+          "name":"Hareesh Peradi",
+          "profilePicture":"assets/images/castandcrew/hareesh.jpg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"408956b2-ab83-11ed-afa1-0242ac120002",
+          "name":"Malavika Avinash",
+          "profilePicture":"assets/images/castandcrew/malavika.jpg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40895946-ab83-11ed-afa1-0242ac120002",
+          "name":"Narain Kumar",
+          "profilePicture":"assets/images/castandcrew/narain.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+        "id":"40894cbc-ab83-11ed-afa1-0242ac120002",
+        "name":"Lokesh K",
+        "profilePicture":"assets/images/castandcrew/lokesh.jpeg",
+        "designation":"Director",
+        "associatedType":"Crew"
+       },
+       {
+          "id":"40895a72-ab83-11ed-afa1-0242ac120002",
+          "name":"S R Prabhu",
+          "profilePicture":"assets/images/castandcrew/srprabhu.jpeg",
+          "designation":"Producer",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40895d2e-ab83-11ed-afa1-0242ac120002",
+          "name":"S R Prakash Babu",
+          "profilePicture":"assets/images/castandcrew/srprakash.jpeg",
+          "designation":"Producer",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40895e5a-ab83-11ed-afa1-0242ac120002",
+          "name":"Sam C S",
+          "profilePicture":"assets/images/castandcrew/samcs.jpeg",
+          "designation":"Music Director",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40895f68-ab83-11ed-afa1-0242ac120002",
+          "name":"Sathyan Sooryan",
+          "profilePicture":"assets/images/castandcrew/sathyan.jpeg",
+          "designation":"DOP",
+          "associatedType":"Crew"
+       }
+    ]
+ }

@@ -1,15 +1,18 @@
 // Package Dependencies
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
+// Constants
+import 'package:first_app/Resources/Constants.dart';
+import 'package:first_app/Resources/Constants+Extensions.dart';
 
 class MovieDetailsWidget extends StatelessWidget {
   final double rating;
   final int votes;
-  final List<String> categories;
+  final List<MovieCategory> categories;
   final String runtime;
-  final List<String> genres;
-  final String censorCertificate;
-  final DateTime releaseDate;
+  final List<MovieGenre> genres;
+  final CensorCertificate censorCertificate;
+  final String releaseDate;
   final String description;
   const MovieDetailsWidget(
       {super.key,
@@ -43,9 +46,9 @@ class MovieDetailsWidget extends StatelessWidget {
     return Row(children: list);
   }
 
-  Widget getCategoryWidgets(List<String> strings) {
+  Widget getCategoryWidgets(List<MovieCategory> categories) {
     List<Widget> list = <Widget>[];
-    for (var i = 0; i < strings.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
       list.add(
         Container(
             padding: const EdgeInsets.all(2),
@@ -54,7 +57,7 @@ class MovieDetailsWidget extends StatelessWidget {
               color: Colors.grey[200],
             ),
             child: Text(
-              strings[i],
+              categories[i].getName(),
               style: const TextStyle(
                   color: Colors.black,
                   fontSize: 8,
@@ -70,13 +73,13 @@ class MovieDetailsWidget extends StatelessWidget {
     return Row(children: list);
   }
 
-  String appendGenres(List<String> genres) {
+  String appendGenres(List<MovieGenre> genres) {
     String appendedGenres = "";
     for (var i = 0; i < genres.length; i++) {
       if (i != genres.length - 1) {
         appendedGenres += '${genres[i]}, ';
       } else {
-        appendedGenres += genres[i];
+        appendedGenres += genres[i].getName();
       }
     }
     return appendedGenres;
@@ -84,14 +87,13 @@ class MovieDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String formattedReleaseDate = DateFormat.yMd().format(releaseDate);
     String appendedGenres = appendGenres(genres);
 
     List<String> additionalDetails = <String>[];
     additionalDetails.add(runtime);
     additionalDetails.add(appendedGenres);
-    additionalDetails.add(censorCertificate);
-    additionalDetails.add(formattedReleaseDate);
+    additionalDetails.add(censorCertificate.name);
+    additionalDetails.add(releaseDate);
 
     return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
       const SizedBox(

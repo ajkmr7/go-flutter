@@ -1,0 +1,81 @@
+{
+    "castAndCrewProfiles":[
+       {
+          "id":"408941e0-ab83-11ed-afa1-0242ac120002",
+          "name":"Kamal Hasan",
+          "profilePicture":"assets/images/castandcrew/kamal.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40894500-ab83-11ed-afa1-0242ac120002",
+          "name":"Fahadh Fasil",
+          "profilePicture":"assets/images/castandcrew/fafa.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40894672-ab83-11ed-afa1-0242ac120002",
+          "name":"Vijay Sethupathi",
+          "profilePicture":"assets/images/castandcrew/vjs.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"408947b2-ab83-11ed-afa1-0242ac120002",
+          "name":"Suriya",
+          "profilePicture":"assets/images/castandcrew/suriya.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"408948d4-ab83-11ed-afa1-0242ac120002",
+          "name":"Arjun Das",
+          "profilePicture":"assets/images/castandcrew/arjundas.jpeg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40894b86-ab83-11ed-afa1-0242ac120002",
+          "name":"Chemban Vinod",
+          "profilePicture":"assets/images/castandcrew/chembi.jpg",
+          "designation":"Actor",
+          "associatedType":"Cast"
+       },
+       {
+          "id":"40894cbc-ab83-11ed-afa1-0242ac120002",
+          "name":"Lokesh K",
+          "profilePicture":"assets/images/castandcrew/lokesh.jpeg",
+          "designation":"Director",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40894dde-ab83-11ed-afa1-0242ac120002",
+          "name":"Kamal Hasan",
+          "profilePicture":"assets/images/castandcrew/kamal.jpeg",
+          "designation":"Producer",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"408950cc-ab83-11ed-afa1-0242ac120002",
+          "name":"Rathna",
+          "profilePicture":"assets/images/castandcrew/rathna.jpeg",
+          "designation":"Writer",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"40895216-ab83-11ed-afa1-0242ac120002",
+          "name":"Anirudh",
+          "profilePicture":"assets/images/castandcrew/anirudh.jpeg",
+          "designation":"Music Director",
+          "associatedType":"Crew"
+       },
+       {
+          "id":"4089532e-ab83-11ed-afa1-0242ac120002",
+          "name":"Girish G",
+          "profilePicture":"assets/images/castandcrew/girish.jpeg",
+          "designation":"DOP",
+          "associatedType":"Crew"
+       }
+    ]
+ }
