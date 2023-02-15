@@ -63,7 +63,7 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
           onTap: () => {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => TrailerWidget(
-                    movieName: widget.movie.name,
+                    movieName: widget.movie.name.toUpperCase(),
                     movieTrailerURLPath: widget.movie.trailerURLPath)))
           },
           child: Stack(alignment: AlignmentDirectional.bottomEnd, children: [
@@ -77,7 +77,7 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
               onPressed: () => {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => TrailerWidget(
-                        movieName: widget.movie.name,
+                        movieName: widget.movie.name.toUpperCase(),
                         movieTrailerURLPath: widget.movie.trailerURLPath)))
               },
             )
@@ -129,7 +129,7 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
                                 height: 8,
                               ),
                               Text(
-                                widget.movie.name,
+                                widget.movie.name.toUpperCase(),
                                 style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 14,

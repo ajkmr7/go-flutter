@@ -12,6 +12,16 @@ class MoviePosterWidget extends StatelessWidget {
   final Movie movie;
   const MoviePosterWidget({super.key, required this.movie});
 
+  Widget getReleaseDateWidget() {
+    List<Widget> list = <Widget>[];
+    list.add(const SizedBox(height: 6));
+    list.add(Text('Releasing on release date'.toUpperCase(),
+        style: const TextStyle(
+            fontSize: 12, color: Color.fromRGBO(85, 85, 85, 0.75))));
+    list.add(const SizedBox(height: 6));
+    return Row(children: list);
+  }
+
   Widget getCategoryWidgets(List<String> strings) {
     List<Widget> list = <Widget>[];
     for (var i = 0; i < strings.length; i++) {
@@ -54,6 +64,8 @@ class MoviePosterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String appendedGenres = appendGenres(movie.additionalDetails.genres);
+    double posterWidth = (MediaQuery.of(context).size.width - 40) / 2;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -63,8 +75,8 @@ class MoviePosterWidget extends StatelessWidget {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => MovieWidget(movie: movie)))
           },
-          child: Container(
-            width: (MediaQuery.of(context).size.width - 60) / 2,
+          child: SizedBox(
+            width: posterWidth,
             child: Stack(alignment: AlignmentDirectional.bottomEnd, children: [
               FittedBox(
                 fit: BoxFit.fill,
@@ -76,7 +88,7 @@ class MoviePosterWidget extends StatelessWidget {
                 onPressed: () => {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => TrailerWidget(
-                          movieName: movie.name,
+                          movieName: movie.name.toUpperCase(),
                           movieTrailerURLPath: movie.trailerURLPath)))
                 },
               )
@@ -87,10 +99,11 @@ class MoviePosterWidget extends StatelessWidget {
           height: 8,
         ),
         Text(
-          movie.name,
+          movie.name.toUpperCase(),
           style: const TextStyle(
               color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
         ),
+        !movie.flags.isNowShowing ? getReleaseDateWidget() : Container(),
         const SizedBox(
           height: 8,
         ),
@@ -108,19 +121,21 @@ class MoviePosterWidget extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        TextButton(
-            style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(Colors.red[400]),
-                padding: MaterialStateProperty.all<EdgeInsets>(
-                    const EdgeInsets.all(0))),
-            onPressed: () => {},
-            child: const Text(
-              "BOOK",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold),
-            ))
+        movie.flags.isBookingsOpen == true
+            ? TextButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.red[400]),
+                    padding: MaterialStateProperty.all<EdgeInsets>(
+                        const EdgeInsets.all(0))),
+                onPressed: () => {},
+                child: const Text(
+                  "BOOK",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold),
+                ))
+            : Container()
       ],
     );
   }

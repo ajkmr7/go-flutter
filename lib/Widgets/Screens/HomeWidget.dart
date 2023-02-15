@@ -9,9 +9,8 @@ import 'package:first_app/Widgets/Components/Home/MoviePostersWidget.dart';
 import '../../Models/Movie.dart';
 
 class HomeWidget extends StatefulWidget {
-  final Movies nowShowing, comingSoon;
-  const HomeWidget(
-      {super.key, required this.nowShowing, required this.comingSoon});
+  final Movies movies;
+  const HomeWidget({super.key, required this.movies});
 
   @override
   State<HomeWidget> createState() => _HomeWidgetState();
@@ -29,7 +28,7 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   @override
   Widget build(BuildContext context) {
-    Movie? newReleaseMovie = getNewReleasedMovie(widget.nowShowing);
+    Movie? newReleaseMovie = getNewReleasedMovie(widget.movies);
     return Container(
       margin: const EdgeInsets.fromLTRB(0, 0, 0, 16),
       child: SingleChildScrollView(
@@ -67,7 +66,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             const SizedBox(
               height: 12,
             ),
-            MoviePostersWidget(movies: widget.nowShowing),
+            MoviePostersWidget(movies: widget.movies, isNowShowing: true),
             const SizedBox(
               height: 12,
             ),
@@ -95,7 +94,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             const SizedBox(
               height: 12,
             ),
-            MoviePostersWidget(movies: widget.comingSoon),
+            MoviePostersWidget(movies: widget.movies, isNowShowing: false),
           ],
         ),
       ),

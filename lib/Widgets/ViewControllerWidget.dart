@@ -18,17 +18,9 @@ class ViewControllerWidget extends StatefulWidget {
 }
 
 class _ViewControllerWidgetState extends State<ViewControllerWidget> {
-  Future<Movies> parseNowShowingJSON() async {
+  Future<Movies> parseMoviesJSON() async {
     final String response =
-        await rootBundle.loadString('assets/mocks/NowShowing.json');
-    var data = json.decode(response);
-    var movies = Movies.fromJson(data);
-    return movies;
-  }
-
-  Future<Movies> parseComingSoonJSON() async {
-    final String response =
-        await rootBundle.loadString('assets/mocks/ComingSoon.json');
+        await rootBundle.loadString('assets/mocks/Movies.json');
     var data = json.decode(response);
     var movies = Movies.fromJson(data);
     return movies;
@@ -104,19 +96,17 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
   Widget? presentingBodyWidget(int index) {
     switch (index) {
       case 0:
-        return FutureBuilder<List<Movies>>(
-          future: Future.wait([parseNowShowingJSON(), parseComingSoonJSON()]),
+        return FutureBuilder<Movies>(
+          future: parseMoviesJSON(),
           builder: (
             BuildContext context,
-            AsyncSnapshot<List<Movies>> snapshot,
+            AsyncSnapshot<Movies> snapshot,
           ) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               const Center(child: CircularProgressIndicator(color: Colors.red));
             } else if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.hasData) {
-                return HomeWidget(
-                    nowShowing: snapshot.data![0],
-                    comingSoon: snapshot.data![1]);
+                return HomeWidget(movies: snapshot.data!);
               } else if (snapshot.hasError) {
                 Center(
                   child: Text(snapshot.error.toString()),
@@ -138,12 +128,26 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
     return null;
   }
 
+  Widget? showFloatingActionButton(int index) {
+    switch (index) {
+      case 0:
+        return FloatingActionButton(
+          onPressed: () => {},
+          backgroundColor: const Color.fromRGBO(28, 46, 74, 0.9),
+          foregroundColor: Colors.white,
+          child: const Icon(Icons.filter_alt),
+        );
+      default:
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: presentingAppBarWidget(_selectedIndex),
       body: presentingBodyWidget(_selectedIndex),
+      floatingActionButton: showFloatingActionButton(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         selectedItemColor: Colors.red[400],

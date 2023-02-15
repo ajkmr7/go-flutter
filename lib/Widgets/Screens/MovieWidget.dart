@@ -9,7 +9,6 @@ import 'package:flutter/services.dart';
 import '../Components/Movie/MovieDetailsWidget.dart';
 import '../Components/Movie/CastAndCrewProfileWidget.dart';
 import '../Components/Movie/ReviewWidget.dart';
-import '../Components/Movie/MoviePosterWidget.dart';
 
 // Models
 import '../../Models/Movie.dart';
@@ -33,24 +32,6 @@ class _MovieWidgetState extends State<MovieWidget> {
     var data = json.decode(response);
     var castAndCrewProfiles = CastAndCrewProfiles.fromJson(data);
     return castAndCrewProfiles;
-  }
-
-  Widget getReviewWidgets(List<Review> reviewList) {
-    List<Widget> list = <Widget>[];
-    for (final review in reviewList) {
-      list.add(ReviewWidget(
-        reviewerName: review.username,
-        rating: review.rating,
-        reviewComments: review.comments,
-        likeCount: review.likeCount,
-        date: review.date,
-      ));
-      list.add(const SizedBox(width: 24));
-    }
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Row(children: list),
-    );
   }
 
   Widget getCastAndCrewProfileWidgets(
@@ -101,7 +82,7 @@ class _MovieWidgetState extends State<MovieWidget> {
           ),
           backgroundColor: Colors.white,
           title: Text(
-            widget.movie.name,
+            widget.movie.name.toUpperCase(),
             style: const TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
           ),
@@ -312,7 +293,6 @@ class _MovieWidgetState extends State<MovieWidget> {
                     const SizedBox(
                       height: 8,
                     ),
-                    getReviewWidgets(widget.movie.reviews),
                     const SizedBox(
                       height: 12,
                     ),

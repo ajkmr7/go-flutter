@@ -25,7 +25,6 @@ class Movie {
   late List<String> carouselImages;
   late String poster;
   late AdditionalDetails additionalDetails;
-  late List<Review> reviews;
   late String trailerURLPath;
   late Flags flags;
 
@@ -35,7 +34,6 @@ class Movie {
       required this.carouselImages,
       required this.poster,
       required this.additionalDetails,
-      required this.reviews,
       required this.trailerURLPath,
       required this.flags});
 
@@ -47,12 +45,6 @@ class Movie {
     additionalDetails = (json['additionalDetails'] != null
         ? AdditionalDetails.fromJson(json['additionalDetails'])
         : null)!;
-    if (json['reviews'] != null) {
-      reviews = <Review>[];
-      json['reviews'].forEach((v) {
-        reviews.add(Review.fromJson(v));
-      });
-    }
     trailerURLPath = json['trailerURLPath'];
     flags = Flags.fromJson(json['flags']);
   }
@@ -64,7 +56,6 @@ class Movie {
     data['carouselImages'] = carouselImages;
     data['poster'] = poster;
     data['additionalDetails'] = additionalDetails.toJson();
-    data['reviews'] = reviews.map((v) => v.toJson()).toList();
     data['trailerURLPath'] = trailerURLPath;
     data['flags'] = flags.toJson();
     return data;
@@ -116,51 +107,27 @@ class AdditionalDetails {
   }
 }
 
-class Review {
-  late String username;
-  late int rating;
-  late String comments;
-  late int likeCount;
-  late String date;
-
-  Review(
-      {required this.username,
-      required this.rating,
-      required this.comments,
-      required this.likeCount,
-      required this.date});
-
-  Review.fromJson(Map<String, dynamic> json) {
-    username = json['username'];
-    rating = json['rating'];
-    comments = json['comments'];
-    likeCount = json['likeCount'];
-    date = json['date'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['username'] = username;
-    data['rating'] = rating;
-    data['comments'] = comments;
-    data['likeCount'] = likeCount;
-    data['date'] = date;
-    return data;
-  }
-}
-
 class Flags {
   late bool isNewRelease;
+  late bool isNowShowing;
+  late bool? isBookingsOpen;
 
-  Flags({required this.isNewRelease});
+  Flags(
+      {required this.isNewRelease,
+      required this.isNowShowing,
+      required this.isBookingsOpen});
 
   Flags.fromJson(Map<String, dynamic> json) {
     isNewRelease = json['isNewRelease'];
+    isNowShowing = json['isNowShowing'];
+    isBookingsOpen = json['isBookingsOpen'] ?? json['isNowShowing'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['isNewRelease'] = isNewRelease;
+    data['isNowShowing'] = isNowShowing;
+    data['isBookingsOpen'] = isBookingsOpen;
     return data;
   }
 }
