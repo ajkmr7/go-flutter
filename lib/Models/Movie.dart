@@ -1,3 +1,7 @@
+// Constants
+import '../Resources/Constants.dart';
+import '../Resources/Constants+Extensions.dart';
+
 class Movies {
   late List<Movie> movies;
 
@@ -11,12 +15,6 @@ class Movies {
       });
     }
   }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['movies'] = movies.map((movie) => movie.toJson()).toList();
-    return data;
-  }
 }
 
 class Movie {
@@ -26,7 +24,7 @@ class Movie {
   late String poster;
   late AdditionalDetails additionalDetails;
   late String trailerURLPath;
-  late Flags flags;
+  late Set<MovieFlag> flags;
 
   Movie(
       {required this.id,
@@ -46,29 +44,17 @@ class Movie {
         ? AdditionalDetails.fromJson(json['additionalDetails'])
         : null)!;
     trailerURLPath = json['trailerURLPath'];
-    flags = Flags.fromJson(json['flags']);
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['name'] = name;
-    data['carouselImages'] = carouselImages;
-    data['poster'] = poster;
-    data['additionalDetails'] = additionalDetails.toJson();
-    data['trailerURLPath'] = trailerURLPath;
-    data['flags'] = flags.toJson();
-    return data;
+    flags = Flags.fromJson(json['flags']).getFlags();
   }
 }
 
 class AdditionalDetails {
   late double rating;
   late int votes;
-  late List<String> categories;
+  late List<MovieCategory> categories;
   late String runtime;
-  late List<String> genres;
-  late String censorCertificate;
+  late List<MovieGenre> genres;
+  late CensorCertificate censorCertificate;
   late String releaseDate;
   late String description;
 
@@ -83,27 +69,23 @@ class AdditionalDetails {
       required this.description});
 
   AdditionalDetails.fromJson(Map<String, dynamic> json) {
+    categories = [];
+    genres = [];
     rating = json['rating'];
     votes = json['votes'];
-    categories = json['categories'].cast<String>();
+    for (var categoryString in json['categories']) {
+      var category = movieCategoryEnumFromString(categoryString);
+      if (category != null) categories.add(category);
+    }
     runtime = json['runtime'];
-    genres = json['genres'].cast<String>();
-    censorCertificate = json['censorCertificate'];
+    for (var genreString in json['genres']) {
+      var genre = movieGenreEnumFromString(genreString);
+      if (genre != null) genres.add(genre);
+    }
+    censorCertificate = CensorCertificate.values.firstWhere(
+        (certificate) => certificate.name == json['censorCertificate']);
     releaseDate = json['releaseDate'];
     description = json['description'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['rating'] = rating;
-    data['votes'] = votes;
-    data['categories'] = categories;
-    data['runtime'] = runtime;
-    data['genres'] = genres;
-    data['censorCertificate'] = censorCertificate;
-    data['releaseDate'] = releaseDate;
-    data['description'] = description;
-    return data;
   }
 }
 
@@ -123,11 +105,13 @@ class Flags {
     isBookingsOpen = json['isBookingsOpen'] ?? json['isNowShowing'];
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['isNewRelease'] = isNewRelease;
-    data['isNowShowing'] = isNowShowing;
-    data['isBookingsOpen'] = isBookingsOpen;
-    return data;
+  Set<MovieFlag> getFlags() {
+    Set<MovieFlag> flags = {};
+    if (isNewRelease) flags.add(MovieFlag.isNewRelease);
+    if (isNowShowing) flags.add(MovieFlag.isNowShowing);
+    if (isBookingsOpen != null && isBookingsOpen!) {
+      flags.add(MovieFlag.isBookingsOpen);
+    }
+    return flags;
   }
 }

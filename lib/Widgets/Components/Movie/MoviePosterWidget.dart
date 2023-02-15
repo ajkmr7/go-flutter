@@ -1,6 +1,10 @@
 // Package Dependencies
+import 'package:first_app/Resources/Constants+Extensions.dart';
 import 'package:first_app/Widgets/Screens/MovieWidget.dart';
 import 'package:flutter/material.dart';
+
+// Constants
+import 'package:first_app/Resources/Constants.dart';
 
 // Models
 import '../../../Models/Movie.dart';
@@ -22,9 +26,9 @@ class MoviePosterWidget extends StatelessWidget {
     return Row(children: list);
   }
 
-  Widget getCategoryWidgets(List<String> strings) {
+  Widget getCategoryWidgets(List<MovieCategory> categories) {
     List<Widget> list = <Widget>[];
-    for (var i = 0; i < strings.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
       list.add(
         Container(
             padding: const EdgeInsets.all(2),
@@ -33,7 +37,7 @@ class MoviePosterWidget extends StatelessWidget {
               color: Colors.grey[200],
             ),
             child: Text(
-              strings[i],
+              categories[i].getName(),
               style: const TextStyle(
                   color: Colors.black,
                   fontSize: 8,
@@ -49,13 +53,13 @@ class MoviePosterWidget extends StatelessWidget {
     return Row(children: list);
   }
 
-  String appendGenres(List<String> genres) {
+  String appendGenres(List<MovieGenre> genres) {
     String appendedGenres = "";
     for (var i = 0; i < genres.length; i++) {
       if (i != genres.length - 1) {
-        appendedGenres += '${genres[i]}, ';
+        appendedGenres += '${genres[i].getName()}, ';
       } else {
-        appendedGenres += genres[i];
+        appendedGenres += genres[i].getName();
       }
     }
     return appendedGenres;
@@ -103,7 +107,9 @@ class MoviePosterWidget extends StatelessWidget {
           style: const TextStyle(
               color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
         ),
-        !movie.flags.isNowShowing ? getReleaseDateWidget() : Container(),
+        !movie.flags.contains(MovieFlag.isNowShowing)
+            ? getReleaseDateWidget()
+            : Container(),
         const SizedBox(
           height: 8,
         ),
@@ -121,7 +127,7 @@ class MoviePosterWidget extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        movie.flags.isBookingsOpen == true
+        movie.flags.contains(MovieFlag.isBookingsOpen) == true
             ? TextButton(
                 style: ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.red[400]),

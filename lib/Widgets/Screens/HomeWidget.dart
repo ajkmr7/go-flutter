@@ -1,4 +1,5 @@
 // Package Dependencies
+import 'package:first_app/Resources/Constants.dart';
 import 'package:flutter/material.dart';
 
 // Widgets
@@ -19,7 +20,7 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   Movie? getNewReleasedMovie(Movies movies) {
     for (final movie in movies.movies) {
-      if (movie.flags.isNewRelease == true) {
+      if (movie.flags.contains(MovieFlag.isNewRelease) == true) {
         return movie;
       }
     }

@@ -1,4 +1,5 @@
 // Package Dependencies
+import 'package:first_app/Resources/Constants.dart';
 import 'package:first_app/Widgets/Components/Movie/MoviePosterWidget.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,8 @@ class _MoviePostersWidgetState extends State<MoviePostersWidget> {
   Movies filterMovies() {
     Movies movies = Movies(movies: []);
     for (var i = 0; i < widget.movies.movies.length; i++) {
-      if (widget.movies.movies[i].flags.isNowShowing == widget.isNowShowing) {
+      if (widget.movies.movies[i].flags.contains(MovieFlag.isNowShowing) ==
+          widget.isNowShowing) {
         movies.movies.add(widget.movies.movies[i]);
       }
     }

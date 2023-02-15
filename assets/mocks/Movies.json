@@ -106,8 +106,10 @@
          "rating":7.5,
          "votes":364100,
          "categories":[
-           "2D, IMAX 2D",
-           "Tamil, Telugu"
+           "2D",
+           "Tamil",
+           "IMAX 2D",
+           "Telugu"
          ],
          "runtime":"2h 58m",
          "genres":[
@@ -138,7 +140,7 @@
          "votes":180000,
          "categories":[
            "2D",
-           "Tamil, Telugu"
+           "Telugu"
          ],
          "runtime":"2h 53m",
          "genres":[

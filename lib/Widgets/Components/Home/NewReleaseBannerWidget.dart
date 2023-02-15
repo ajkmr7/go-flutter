@@ -1,7 +1,11 @@
 // Package Dependencies
+import 'package:first_app/Resources/Constants+Extensions.dart';
 import 'package:first_app/Widgets/Screens/MovieWidget.dart';
 import 'package:first_app/Widgets/Screens/TrailerWidget.dart';
 import 'package:flutter/material.dart';
+
+// Constants
+import 'package:first_app/Resources/Constants.dart';
 
 // Models
 import '../../../Models/Movie.dart';
@@ -15,9 +19,9 @@ class NewReleaseBannerWidget extends StatefulWidget {
 }
 
 class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
-  Widget getCategoryWidgets(List<String> strings) {
+  Widget getCategoryWidgets(List<MovieCategory> categories) {
     List<Widget> list = <Widget>[];
-    for (var i = 0; i < strings.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
       list.add(
         Container(
             padding: const EdgeInsets.all(2),
@@ -26,7 +30,7 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
               color: Colors.grey[200],
             ),
             child: Text(
-              strings[i],
+              categories[i].getName(),
               style: const TextStyle(
                   color: Colors.black,
                   fontSize: 8,
@@ -42,13 +46,13 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
     return Row(children: list);
   }
 
-  String appendGenres(List<String> genres) {
+  String appendGenres(List<MovieGenre> genres) {
     String appendedGenres = "";
     for (var i = 0; i < genres.length; i++) {
       if (i != genres.length - 1) {
-        appendedGenres += '${genres[i]}, ';
+        appendedGenres += '${genres[i].getName()}, ';
       } else {
-        appendedGenres += genres[i];
+        appendedGenres += genres[i].getName();
       }
     }
     return appendedGenres;
