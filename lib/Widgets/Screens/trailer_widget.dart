@@ -18,6 +18,7 @@ class _HomeWidgetState extends State<TrailerWidget> {
 
   @override
   void initState() {
+    super.initState();
     _controller = YoutubePlayerController(
       initialVideoId: widget.movieTrailerURLPath,
       flags: const YoutubePlayerFlags(

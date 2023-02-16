@@ -27,6 +27,7 @@ class _ReviewWidgetState extends State<ReviewWidget> {
 
   @override
   void initState() {
+    super.initState();
     likes = widget.likeCount;
   }
 
@@ -195,7 +196,7 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${widget.date}',
+                        widget.date,
                         style: const TextStyle(
                             color: Color.fromRGBO(85, 85, 85, 1),
                             fontSize: 10,

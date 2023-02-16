@@ -4,11 +4,11 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 // Widgets
-import 'package:first_app/Widgets/Screens/HomeWidget.dart';
-import 'package:first_app/Widgets/Screens/ProfileWidget.dart';
+import 'package:first_app/widgets/screens/home_widget.dart';
+import 'package:first_app/widgets/screens/profile_widget.dart';
 
 // Models
-import '../Models/Movie.dart';
+import '../models/movie.dart';
 
 class ViewControllerWidget extends StatefulWidget {
   const ViewControllerWidget({super.key});
@@ -138,6 +138,7 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
           child: const Icon(Icons.filter_alt),
         );
       default:
+        return Container();
     }
   }
 

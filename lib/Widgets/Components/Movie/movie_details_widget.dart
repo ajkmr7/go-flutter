@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // Constants
-import 'package:first_app/Resources/Constants.dart';
-import 'package:first_app/Resources/Constants+Extensions.dart';
+import 'package:first_app/resources/constants.dart';
+import 'package:first_app/resources/constants_extensions.dart';
 
 class MovieDetailsWidget extends StatelessWidget {
   final double rating;

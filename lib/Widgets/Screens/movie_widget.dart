@@ -6,13 +6,12 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 // Widgets
-import '../Components/Movie/MovieDetailsWidget.dart';
-import '../Components/Movie/CastAndCrewProfileWidget.dart';
-import '../Components/Movie/ReviewWidget.dart';
+import '../components/movie/movie_details_widget.dart';
+import '../components/movie/cast_and_crew_profile_widget.dart';
 
 // Models
-import '../../Models/Movie.dart';
-import '../../Models/CastAndCrewProfile.dart';
+import '../../models/movie.dart';
+import '../../models/cast_and_crew_profile.dart';
 
 class MovieWidget extends StatefulWidget {
   const MovieWidget({super.key, required this.movie});
