@@ -2,15 +2,15 @@
 import 'package:flutter/material.dart';
 
 // Constants
-import 'package:first_app/Resources/Constants.dart';
-import 'package:first_app/Resources/Constants+Extensions.dart';
+import 'package:first_app/resources/constants.dart';
+import 'package:first_app/resources/constants_extensions.dart';
 
 // Models
-import '../../../Models/Movie.dart';
+import '../../../models/movie.dart';
 
 // Widgets
-import '../../Screens/TrailerWidget.dart';
-import 'package:first_app/Widgets/Screens/MovieWidget.dart';
+import '../../screens/trailer_widget.dart';
+import 'package:first_app/widgets/screens/movie_widget.dart';
 
 class MoviePosterWidget extends StatelessWidget {
   final Movie movie;

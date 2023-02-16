@@ -1,5 +1,5 @@
 // Package Dependencies
-import 'package:first_app/Widgets/ViewControllerWidget.dart';
+import 'package:first_app/widgets/view_controller_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {

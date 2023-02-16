@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 
 // Widgets
-import '../Components/Home/NewReleaseBannerWidget.dart';
-import 'package:first_app/Widgets/Components/Home/MoviePostersWidget.dart';
+import '../components/home/new_release_banner_widget.dart';
+import 'package:first_app/widgets/components/home/movie_posters_widget.dart';
 
 // Models
-import '../../Models/Movie.dart';
+import '../../models/movie.dart';
 
 // Constants
 import 'package:first_app/Resources/Constants.dart';

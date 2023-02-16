@@ -1,6 +1,6 @@
 // Constants
-import '../Resources/Constants.dart';
-import '../Resources/Constants+Extensions.dart';
+import '../resources/constants.dart';
+import '../resources/constants_extensions.dart';
 
 class Movies {
   late List<Movie> movies;

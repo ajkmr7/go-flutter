@@ -1,12 +1,12 @@
 // Constants
-import 'package:first_app/Resources/Constants.dart';
+import 'package:first_app/resources/constants.dart';
 
 // Package Dependencies
-import 'package:first_app/Widgets/Components/Movie/MoviePosterWidget.dart';
+import 'package:first_app/widgets/components/movie/movie_poster_widget.dart';
 import 'package:flutter/material.dart';
 
 // Models
-import '../../../Models/Movie.dart';
+import '../../../models/movie.dart';
 
 class MoviePostersWidget extends StatefulWidget {
   final Movies movies;
