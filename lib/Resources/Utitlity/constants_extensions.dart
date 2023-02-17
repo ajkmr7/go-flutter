@@ -1,5 +1,5 @@
 // Constants
-import 'constants.dart';
+import './constants.dart';
 
 extension MovieCategoryExtension on MovieCategory {
   String getName() {

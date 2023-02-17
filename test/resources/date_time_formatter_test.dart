@@ -2,7 +2,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 // Resources
-import 'package:first_app/resources/Utitlity/date_time_formatter.dart';
+import 'package:first_app/resources/utitlity/date_time_formatter.dart';
 
 void main() {
   test('ISO8601 to DD/MMM/YYYY', () {

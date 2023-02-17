@@ -9,7 +9,7 @@ import 'package:first_app/widgets/components/home/movie_posters_widget.dart';
 import '../../models/movie.dart';
 
 // Constants
-import 'package:first_app/Resources/Constants.dart';
+import 'package:first_app/resources/utitlity/constants.dart';
 
 class HomeWidget extends StatefulWidget {
   final Movies movies;

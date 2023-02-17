@@ -1,5 +1,5 @@
 // Constants
-import 'package:first_app/resources/constants.dart';
+import 'package:first_app/resources/utitlity/constants.dart';
 
 // Package Dependencies
 import 'package:first_app/widgets/components/movie/movie_poster_widget.dart';

@@ -2,7 +2,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
 // Resources
-import 'package:first_app/resources/Utitlity/number_formatter.dart';
+import 'package:first_app/resources/utitlity/number_formatter.dart';
 
 void main() {
   group('Number Formatting', () {
