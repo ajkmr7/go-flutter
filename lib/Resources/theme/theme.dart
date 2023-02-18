@@ -9,6 +9,20 @@ class MyTheme {
     return ThemeData(
         primaryColor: brandPrimary,
         scaffoldBackgroundColor: brandPrimary,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: buttonPrimary,
+              textStyle: const TextStyle(
+                  fontFamily: 'NunitoSans',
+                  color: brandPrimary,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.bold),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16.0),
+              ),
+              disabledBackgroundColor:
+                  buttonPrimary.withAlpha((0.4 * 255).round())),
+        ),
         textTheme: TextTheme(
           displayLarge: const TextStyle(
             fontFamily: 'NunitoSans',
