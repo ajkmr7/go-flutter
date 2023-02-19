@@ -82,6 +82,9 @@ flutter:
       fonts:
         - asset: fonts/NunitoSans-Bold.ttf
         - asset: fonts/NunitoSans-Regular.ttf
+    - family: CustomIcons
+      fonts:
+        - asset: fonts/CustomIcons.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

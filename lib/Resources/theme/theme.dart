@@ -11,11 +11,14 @@ class MyTheme {
         scaffoldBackgroundColor: brandPrimary,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+              foregroundColor: brandPrimary,
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
+              minimumSize: const Size(0, 0),
               backgroundColor: buttonPrimary,
               textStyle: const TextStyle(
                   fontFamily: 'NunitoSans',
-                  color: brandPrimary,
-                  fontSize: 17.0,
+                  fontSize: 11.0,
+                  letterSpacing: 1.5,
                   fontWeight: FontWeight.bold),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16.0),
@@ -48,9 +51,9 @@ class MyTheme {
             fontSize: 17.0,
             fontWeight: FontWeight.bold,
           ),
-          titleSmall: const TextStyle(
+          titleSmall: TextStyle(
               fontFamily: 'NunitoSans',
-              color: brandPrimary,
+              color: textPrimary.withAlpha((0.6 * 255).round()),
               fontSize: 17.0,
               fontWeight: FontWeight.bold),
           bodyLarge: const TextStyle(
@@ -76,7 +79,7 @@ class MyTheme {
           labelSmall: const TextStyle(
               fontFamily: 'NunitoSans',
               color: brandPrimary,
-              fontSize: 6.0,
+              fontSize: 7.0,
               fontWeight: FontWeight.bold),
         ),
         colorScheme: ColorScheme.fromSwatch()

@@ -8,23 +8,17 @@ class Rating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(4),
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          colors: [
-            Color(0x99FFBB00),
-            otherPrimary,
-          ],
-        ),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: Colors.transparent,
-        ),
-      ),
-    );
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(12)),
+            color: otherPrimary),
+        child: Text(
+          text,
+          style: const TextStyle(
+              fontFamily: 'NunitoSans',
+              color: brandPrimary,
+              fontSize: 13.0,
+              fontWeight: FontWeight.bold),
+        ));
   }
 }

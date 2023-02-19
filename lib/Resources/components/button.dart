@@ -18,19 +18,17 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (buttonType) {
       case ButtonType.small:
-        return SizedBox(
-          height: 28,
-          width: 72,
-          child: ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor:
-                  Theme.of(context).elevatedButtonTheme.style?.backgroundColor,
-              shape: Theme.of(context).elevatedButtonTheme.style?.shape,
-              textStyle: Theme.of(context).elevatedButtonTheme.style?.textStyle,
-            ),
-            onPressed: onPressed,
-            child: Text(text),
+        return ElevatedButton(
+          style: ButtonStyle(
+            foregroundColor:
+                Theme.of(context).elevatedButtonTheme.style?.foregroundColor,
+            backgroundColor:
+                Theme.of(context).elevatedButtonTheme.style?.backgroundColor,
+            shape: Theme.of(context).elevatedButtonTheme.style?.shape,
+            textStyle: Theme.of(context).elevatedButtonTheme.style?.textStyle,
           ),
+          onPressed: onPressed,
+          child: Text(text),
         );
       case ButtonType.large:
         return Container(
@@ -40,6 +38,10 @@ class CustomButton extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               style: ButtonStyle(
+                foregroundColor: Theme.of(context)
+                    .elevatedButtonTheme
+                    .style
+                    ?.foregroundColor,
                 backgroundColor: Theme.of(context)
                     .elevatedButtonTheme
                     .style

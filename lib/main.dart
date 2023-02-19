@@ -2,6 +2,9 @@
 import 'package:first_app/widgets/view_controller_widget.dart';
 import 'package:flutter/material.dart';
 
+// Theme
+import './resources/theme/theme.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,9 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
+      theme: MyTheme.darkTheme(),
       home: const ViewControllerWidget(),
     );
   }

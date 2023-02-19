@@ -18,4 +18,6 @@ class CustomIcons {
       IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData ticket =
       IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData play =
+      IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
