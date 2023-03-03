@@ -1,3 +1,4 @@
+// Package Dependencies
 import 'package:flutter/material.dart';
 
 enum ButtonType { small, large }
@@ -47,8 +48,12 @@ class CustomButton extends StatelessWidget {
                     .style
                     ?.backgroundColor,
                 shape: Theme.of(context).elevatedButtonTheme.style?.shape,
-                textStyle:
-                    Theme.of(context).elevatedButtonTheme.style?.textStyle,
+                textStyle: MaterialStateProperty.resolveWith(
+                  (states) => const TextStyle(
+                      fontFamily: 'NunitoSans',
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
               onPressed: onPressed,
               child: Text(text),

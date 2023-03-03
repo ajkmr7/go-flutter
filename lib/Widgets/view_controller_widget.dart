@@ -30,15 +30,6 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
     return movies;
   }
 
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      presentingBodyWidget(_selectedIndex);
-    });
-  }
-
   PreferredSizeWidget? presentingAppBarWidget(int index) {
     switch (index) {
       case 0:

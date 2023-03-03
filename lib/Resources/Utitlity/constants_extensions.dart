@@ -100,3 +100,18 @@ MovieGenre? movieGenreEnumFromString(String value) {
       return null;
   }
 }
+
+extension MovieCertificate on CensorCertificate {
+  String getName() {
+    switch (this) {
+      case CensorCertificate.U:
+        return "U";
+      case CensorCertificate.UA:
+        return "UA";
+      case CensorCertificate.A:
+        return "A";
+      case CensorCertificate.S:
+        return "S";
+    }
+  }
+}

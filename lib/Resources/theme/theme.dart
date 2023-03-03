@@ -56,9 +56,9 @@ class MyTheme {
               color: textPrimary.withAlpha((0.6 * 255).round()),
               fontSize: 17.0,
               fontWeight: FontWeight.bold),
-          bodyLarge: const TextStyle(
+          bodyLarge: TextStyle(
               fontFamily: 'NunitoSans',
-              color: textPrimary,
+              color: textPrimary.withAlpha((0.6 * 255).round()),
               fontSize: 15.0,
               fontWeight: FontWeight.normal),
           bodyMedium: TextStyle(

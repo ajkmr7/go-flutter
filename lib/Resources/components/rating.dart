@@ -3,22 +3,34 @@ import '../theme/color.dart';
 
 class Rating extends StatelessWidget {
   final String text;
-  const Rating({super.key, required this.text});
+
+  const Rating({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-            color: otherPrimary),
-        child: Text(
-          text,
-          style: const TextStyle(
-              fontFamily: 'NunitoSans',
-              color: brandPrimary,
-              fontSize: 13.0,
-              fontWeight: FontWeight.bold),
-        ));
+      padding: const EdgeInsets.all(6),
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(8)),
+        gradient: LinearGradient(
+          colors: [
+            otherPrimary.withOpacity(0.6),
+            otherPrimary,
+          ],
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+        ),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          letterSpacing: 1.2,
+          fontFamily: 'NunitoSans',
+          color: brandPrimary,
+          fontSize: 11.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
   }
 }

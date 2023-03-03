@@ -11,9 +11,6 @@ import 'package:first_app/resources/utitlity/constants_extensions.dart';
 // Models
 import '../../../models/movie.dart';
 
-// Widgets
-import 'package:first_app/widgets/screens/movie_widget.dart';
-
 // Theme
 import 'package:first_app/resources/theme/color.dart';
 

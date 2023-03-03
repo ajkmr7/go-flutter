@@ -1,42 +1,29 @@
 // Package Dependencies
+import 'package:first_app/resources/utitlity/number_formatter.dart';
 import 'package:flutter/material.dart';
 
 // Constants
 import 'package:first_app/resources/utitlity/constants.dart';
 import 'package:first_app/resources/utitlity/constants_extensions.dart';
 
-class MovieDetailsWidget extends StatelessWidget {
-  final double rating;
-  final int votes;
-  final List<MovieCategory> categories;
-  final String runtime;
-  final List<MovieGenre> genres;
-  final CensorCertificate censorCertificate;
-  final String releaseDate;
-  final String description;
-  const MovieDetailsWidget(
-      {super.key,
-      required this.rating,
-      required this.votes,
-      required this.categories,
-      required this.runtime,
-      required this.genres,
-      required this.censorCertificate,
-      required this.releaseDate,
-      required this.description});
+// Models
+import 'package:first_app/models/movie.dart';
 
-  Widget getAdditionalDetailsWidgets(List<String> strings) {
+// Theme
+import '../../../resources/components/category.dart';
+import '../../../resources/components/rating.dart';
+import '../../../resources/components/additional_detail.dart';
+
+// Utitlity
+
+class MovieDetailsWidget extends StatelessWidget {
+  final Movie movie;
+  const MovieDetailsWidget({super.key, required this.movie});
+
+  Widget getCategoryWidgets(List<MovieCategory> categories) {
     List<Widget> list = <Widget>[];
-    for (var i = 0; i < strings.length; i++) {
-      list.add(
-        Text(
-          strings[i],
-          style: const TextStyle(
-              color: Color.fromRGBO(85, 85, 85, 1),
-              fontSize: 10,
-              fontWeight: FontWeight.normal),
-        ),
-      );
+    for (var i = 0; i < categories.length; i++) {
+      list.add(Category(text: categories[i].getName()));
       list.add(
         const SizedBox(
           width: 4,
@@ -46,38 +33,25 @@ class MovieDetailsWidget extends StatelessWidget {
     return Row(children: list);
   }
 
-  Widget getCategoryWidgets(List<MovieCategory> categories) {
+  Widget getAdditionalDetailWidgets() {
     List<Widget> list = <Widget>[];
-    for (var i = 0; i < categories.length; i++) {
-      list.add(
-        Container(
-            padding: const EdgeInsets.all(2),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(4),
-              color: Colors.grey[200],
-            ),
-            child: Text(
-              categories[i].getName(),
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 8,
-                  fontWeight: FontWeight.bold),
-            )),
-      );
-      list.add(
-        const SizedBox(
-          width: 4,
-        ),
-      );
-    }
-    return Row(children: list);
+    list.add(AdditonalDetail(
+        title: "Time", subTitle: movie.additionalDetails.runtime));
+    list.add(AdditonalDetail(
+        title: "Votes",
+        subTitle: NumberFormatter.format(movie.additionalDetails.votes)));
+    list.add(AdditonalDetail(
+        title: "Certificate",
+        subTitle: movie.additionalDetails.censorCertificate.getName()));
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween, children: list);
   }
 
   String appendGenres(List<MovieGenre> genres) {
     String appendedGenres = "";
     for (var i = 0; i < genres.length; i++) {
       if (i != genres.length - 1) {
-        appendedGenres += '${genres[i]}, ';
+        appendedGenres += '${genres[i].getName()}, ';
       } else {
         appendedGenres += genres[i].getName();
       }
@@ -87,151 +61,44 @@ class MovieDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String appendedGenres = appendGenres(genres);
-
-    List<String> additionalDetails = <String>[];
-    additionalDetails.add(runtime);
-    additionalDetails.add(appendedGenres);
-    additionalDetails.add(censorCertificate.name);
-    additionalDetails.add(releaseDate);
-
-    return Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-      const SizedBox(
-        width: double.infinity,
-        height: 16,
-      ),
-      Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    String appendedGenres = appendGenres(movie.additionalDetails.genres);
+    return Container(
+      margin: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+      child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const SizedBox(
-                width: 4,
-              ),
-              Icon(
-                Icons.star,
-                color: Colors.red[400],
-                size: 18,
-              ),
-              const SizedBox(
-                width: 4,
-              ),
-              Text('$rating/10',
-                  textAlign: TextAlign.left,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 1),
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold)),
-              const SizedBox(
-                width: 4,
-              ),
-              Text('$votes votes',
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                      color: Color.fromRGBO(85, 85, 85, 1),
-                      fontSize: 10,
-                      fontWeight: FontWeight.normal)),
-              const SizedBox(width: 4),
-              const Icon(
-                Icons.arrow_forward_ios,
-                color: Color.fromRGBO(85, 85, 85, 1),
-                size: 12,
-              ),
-            ],
-          )
-        ],
-      ),
-      const SizedBox(
-        width: double.infinity,
-        height: 16,
-      ),
-      Container(
-        width: double.infinity,
-        margin: const EdgeInsets.fromLTRB(4, 0, 4, 0),
-        padding: const EdgeInsets.fromLTRB(12, 4, 12, 4),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: Colors.blueGrey[50],
-        ),
-        child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text('Add your rating & review',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                      color: Color.fromRGBO(0, 0, 0, 1),
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold)),
-              SizedBox(
-                height: 4,
-              ),
-              Text('Your ratings matter',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                      color: Color.fromRGBO(85, 85, 85, 1),
-                      fontSize: 10,
-                      fontWeight: FontWeight.normal)),
-            ],
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(movie.name,
+                            style: Theme.of(context).textTheme.displayMedium),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        getCategoryWidgets(movie.additionalDetails.categories),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                          appendedGenres,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                      ]),
+                ]),
+            Rating(text: 'IMDB ${movie.additionalDetails.rating.toString()}')
+          ]),
+          const SizedBox(
+            height: 24,
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(vertical: 4),
-            child: OutlinedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  side: MaterialStateProperty.all(
-                    BorderSide(
-                        color: (Colors.red[400])!,
-                        width: 1.0,
-                        style: BorderStyle.solid),
-                  ),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4))),
-                ),
-                child: Text(
-                  'Rate Now',
-                  style: TextStyle(
-                      color: Colors.red[400],
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold),
-                )),
-          )
-        ]),
-      ),
-      const SizedBox(
-        width: double.infinity,
-        height: 8,
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [getCategoryWidgets(categories)],
-      ),
-      const SizedBox(
-        width: double.infinity,
-        height: 8,
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          getAdditionalDetailsWidgets(additionalDetails),
+          Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            getAdditionalDetailWidgets(),
+          ]),
         ],
       ),
-      const SizedBox(
-        height: 8,
-      ),
-      Text(
-        description,
-        textAlign: TextAlign.justify,
-        style: const TextStyle(
-            color: Colors.black, fontSize: 12, fontWeight: FontWeight.normal),
-      ),
-      const SizedBox(
-        height: 12,
-      ),
-    ]);
+    );
   }
 }

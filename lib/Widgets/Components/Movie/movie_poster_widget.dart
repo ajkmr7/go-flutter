@@ -1,5 +1,4 @@
 // Package Dependencies
-import 'package:first_app/resources/components/rating.dart';
 import 'package:flutter/material.dart';
 
 // Constants
@@ -10,7 +9,8 @@ import 'package:first_app/resources/utitlity/constants_extensions.dart';
 import '../../../models/movie.dart';
 
 // Widgets
-import 'package:first_app/widgets/screens/movie_widget.dart';
+import '../../../widgets/screens/movie_widget.dart';
+import 'package:first_app/resources/components/rating.dart';
 
 class MoviePosterWidget extends StatelessWidget {
   final Movie movie;

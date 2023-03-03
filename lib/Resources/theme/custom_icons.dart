@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+// Widgets
+import 'package:flutter/material.dart';
 
 class CustomIcons {
   CustomIcons._();
