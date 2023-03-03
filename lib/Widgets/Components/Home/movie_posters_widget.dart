@@ -1,9 +1,11 @@
-// Constants
-import 'package:first_app/resources/constants.dart';
-
 // Package Dependencies
-import 'package:first_app/widgets/components/movie/movie_poster_widget.dart';
 import 'package:flutter/material.dart';
+
+// Constants
+import 'package:first_app/resources/utitlity/constants.dart';
+
+// Widgets
+import 'package:first_app/widgets/components/movie/movie_poster_widget.dart';
 
 // Models
 import '../../../models/movie.dart';
@@ -19,28 +21,36 @@ class MoviePostersWidget extends StatefulWidget {
 }
 
 class _MoviePostersWidgetState extends State<MoviePostersWidget> {
-  Row getMoviePostersColumn(Movie movie1, Movie? movie2) {
-    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      MoviePosterWidget(movie: movie1),
-      if (movie2 != null) MoviePosterWidget(movie: movie2),
-    ]);
+  List<Widget> getMoviePostersByColumn(
+      {required Movies movies, required bool isFirstRow}) {
+    List<Widget> list = <Widget>[];
+    var i = isFirstRow ? 0 : 1;
+    bool isFirstColumn = true;
+    double aspectRatio = isFirstRow ? 1.75 : 1.5;
+    for (; i < movies.movies.length - 1; i += 2) {
+      list.add(
+          MoviePosterWidget(movie: movies.movies[i], aspectRatio: aspectRatio));
+      list.add(const SizedBox(height: 16));
+      isFirstColumn = !isFirstColumn;
+      aspectRatio = aspectRatio == 1.75 ? 1.5 : 1.75;
+    }
+
+    return list;
   }
 
-  Column getMoviePostersLayout({required Movies movies}) {
-    List<Widget> list = <Widget>[];
-    for (var i = 0; i < movies.movies.length - 1; i += 2) {
-      list.add(getMoviePostersColumn(movies.movies[i], movies.movies[i + 1]));
-      list.add(const SizedBox(
-        height: 20,
-      ));
-    }
-    if (movies.movies.length % 2 != 0) {
-      list.add(getMoviePostersColumn(movies.movies.last, null));
-    }
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: list,
-    );
+  Widget getMoviePostersLayout({required Movies movies}) {
+    return Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            children: getMoviePostersByColumn(movies: movies, isFirstRow: true),
+          ),
+          Column(
+            children:
+                getMoviePostersByColumn(movies: movies, isFirstRow: false),
+          ),
+        ]);
   }
 
   Movies filterMovies() {
@@ -57,7 +67,7 @@ class _MoviePostersWidgetState extends State<MoviePostersWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.all(16),
+        margin: const EdgeInsets.symmetric(horizontal: 32.0),
         child: getMoviePostersLayout(movies: filterMovies()));
   }
 }

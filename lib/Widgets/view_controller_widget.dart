@@ -10,6 +10,10 @@ import 'package:first_app/widgets/screens/profile_widget.dart';
 // Models
 import '../models/movie.dart';
 
+// Theme
+import 'package:first_app/resources/theme/custom_icons.dart';
+import 'package:first_app/resources/theme/color.dart';
+
 class ViewControllerWidget extends StatefulWidget {
   const ViewControllerWidget({super.key});
 
@@ -26,15 +30,6 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
     return movies;
   }
 
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      presentingBodyWidget(_selectedIndex);
-    });
-  }
-
   PreferredSizeWidget? presentingAppBarWidget(int index) {
     switch (index) {
       case 0:
@@ -42,52 +37,46 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 "It All Starts Here",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
+                style: Theme.of(context).textTheme.displaySmall,
               ),
               const SizedBox(height: 8),
               Row(
-                children: const [
-                  Text(
-                    "Chennai",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 14,
-                    ),
-                  ),
-                  SizedBox(
+                children: [
+                  Text("Chennai", style: Theme.of(context).textTheme.bodyText2),
+                  const SizedBox(
                     width: 4,
-                  ),
-                  Icon(Icons.chevron_right, color: Colors.grey, size: 14),
+                  )
                 ],
               ),
             ],
           ),
-          backgroundColor: const Color.fromRGBO(28, 46, 74, 0.9),
+          backgroundColor: Theme.of(context).colorScheme.background,
           actions: const [
-            Icon(
-              Icons.search,
+            Padding(
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
+              child: Icon(
+                CustomIcons.search,
+                color: textPrimary,
+              ),
             ),
-            SizedBox(
-              width: 12,
+            SizedBox(height: 8),
+            Padding(
+              padding: EdgeInsets.only(right: 16),
+              child: Icon(
+                CustomIcons.notification,
+                color: textPrimary,
+              ),
             ),
-            Icon(Icons.notifications_outlined),
-            SizedBox(
-              width: 12,
-            ),
+            SizedBox(height: 8),
           ],
-          toolbarHeight: 72,
+          toolbarHeight: 88,
         );
       case 1:
         return AppBar(
-          backgroundColor: const Color.fromRGBO(28, 46, 74, 0.9),
-          toolbarHeight: 72,
+          backgroundColor: Theme.of(context).colorScheme.background,
+          toolbarHeight: 88,
         );
     }
     return null;
@@ -128,46 +117,12 @@ class _ViewControllerWidgetState extends State<ViewControllerWidget> {
     return null;
   }
 
-  Widget? showFloatingActionButton(int index) {
-    switch (index) {
-      case 0:
-        return FloatingActionButton(
-          onPressed: () => {},
-          backgroundColor: const Color.fromRGBO(28, 46, 74, 0.9),
-          foregroundColor: Colors.white,
-          child: const Icon(Icons.filter_alt),
-        );
-      default:
-        return Container();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: presentingAppBarWidget(_selectedIndex),
-      body: presentingBodyWidget(_selectedIndex),
-      floatingActionButton: showFloatingActionButton(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        selectedItemColor: Colors.red[400],
-        unselectedItemColor: Colors.grey,
-        selectedFontSize: 16,
-        unselectedFontSize: 14,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      backgroundColor: Theme.of(context).colorScheme.background,
+      appBar: presentingAppBarWidget(0),
+      body: presentingBodyWidget(0),
     );
   }
 }

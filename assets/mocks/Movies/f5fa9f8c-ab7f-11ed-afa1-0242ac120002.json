@@ -44,7 +44,7 @@
        },
        {
           "id":"40894cbc-ab83-11ed-afa1-0242ac120002",
-          "name":"Lokesh K",
+          "name":"Lokesh Kanagaraj",
           "profilePicture":"assets/images/castandcrew/lokesh.jpeg",
           "designation":"Director",
           "associatedType":"Crew"
@@ -58,23 +58,23 @@
        },
        {
           "id":"408950cc-ab83-11ed-afa1-0242ac120002",
-          "name":"Rathna",
+          "name":"Rathna Kumar",
           "profilePicture":"assets/images/castandcrew/rathna.jpeg",
           "designation":"Writer",
           "associatedType":"Crew"
        },
        {
           "id":"40895216-ab83-11ed-afa1-0242ac120002",
-          "name":"Anirudh",
+          "name":"Anirudh Ravichander",
           "profilePicture":"assets/images/castandcrew/anirudh.jpeg",
           "designation":"Music Director",
           "associatedType":"Crew"
        },
        {
           "id":"4089532e-ab83-11ed-afa1-0242ac120002",
-          "name":"Girish G",
+          "name":"Girish Gangadharan",
           "profilePicture":"assets/images/castandcrew/girish.jpeg",
-          "designation":"DOP",
+          "designation":"Cinematographer",
           "associatedType":"Crew"
        }
     ]

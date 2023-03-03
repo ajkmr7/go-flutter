@@ -1,16 +1,18 @@
 // Package Dependencies
+import 'package:first_app/resources/components/button.dart';
+import 'package:first_app/resources/components/category.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 // Constants
-import 'package:first_app/resources/constants.dart';
-import 'package:first_app/resources/constants_extensions.dart';
+import 'package:first_app/resources/utitlity/constants.dart';
+import 'package:first_app/resources/utitlity/constants_extensions.dart';
 
 // Models
 import '../../../models/movie.dart';
 
-// Widgets
-import 'package:first_app/widgets/screens/movie_widget.dart';
-import 'package:first_app/widgets/screens/trailer_widget.dart';
+// Theme
+import 'package:first_app/resources/theme/color.dart';
 
 class NewReleaseBannerWidget extends StatefulWidget {
   final Movie movie;
@@ -21,24 +23,11 @@ class NewReleaseBannerWidget extends StatefulWidget {
 }
 
 class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
+  late YoutubePlayerController _controller;
   Widget getCategoryWidgets(List<MovieCategory> categories) {
     List<Widget> list = <Widget>[];
     for (var i = 0; i < categories.length; i++) {
-      list.add(
-        Container(
-            padding: const EdgeInsets.all(2),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(4),
-              color: Colors.grey[200],
-            ),
-            child: Text(
-              categories[i].getName(),
-              style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 8,
-                  fontWeight: FontWeight.bold),
-            )),
-      );
+      list.add(Category(text: categories[i].getName()));
       list.add(
         const SizedBox(
           width: 4,
@@ -61,125 +50,97 @@ class _NewReleaseBannerWidgetState extends State<NewReleaseBannerWidget> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    _controller = YoutubePlayerController(
+      initialVideoId: widget.movie.trailerURLPath,
+      flags: const YoutubePlayerFlags(
+          autoPlay: false,
+          mute: false,
+          forceHD: true,
+          controlsVisibleAtStart: false),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
     String appendedGenres = appendGenres(widget.movie.additionalDetails.genres);
     return Column(
       children: [
-        InkWell(
-          onTap: () => {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => TrailerWidget(
-                    movieName: widget.movie.name.toUpperCase(),
-                    movieTrailerURLPath: widget.movie.trailerURLPath)))
-          },
-          child: Stack(alignment: AlignmentDirectional.bottomEnd, children: [
-            FittedBox(
-              fit: BoxFit.fill,
-              child: Image.asset(widget.movie.carouselImages.first),
-            ),
-            IconButton(
-              icon: const Icon(Icons.play_circle_outlined),
-              color: Colors.white,
-              onPressed: () => {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => TrailerWidget(
-                        movieName: widget.movie.name.toUpperCase(),
-                        movieTrailerURLPath: widget.movie.trailerURLPath)))
-              },
-            )
-          ]),
-        ),
-        const SizedBox(height: 12),
-        InkWell(
-          onTap: () => {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => MovieWidget(movie: widget.movie)))
-          },
-          child: Container(
-            margin: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-            padding: const EdgeInsets.all(1),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                    width: 0.25,
-                    color: const Color.fromRGBO(85, 85, 85, 1),
-                    style: BorderStyle.solid)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(6),
-                        color: Colors.red[400],
-                        child: const Text(
-                          'New Release',
-                          style: TextStyle(color: Colors.white, fontSize: 10),
-                        ),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.fromLTRB(8, 8, 0, 16),
-                        child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "TRENDING",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(85, 85, 85, 0.75),
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                widget.movie.name.toUpperCase(),
-                                style: const TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              getCategoryWidgets(
-                                  widget.movie.additionalDetails.categories),
-                              const SizedBox(
-                                height: 6,
-                              ),
-                              Text(
-                                appendedGenres,
-                                style: const TextStyle(
-                                    color: Color.fromRGBO(85, 85, 85, 0.75),
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.normal),
-                              ),
-                            ]),
-                      ),
-                    ]),
-                Container(
-                  margin: const EdgeInsets.all(16),
-                  child: TextButton(
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.red[400]),
-                          padding: MaterialStateProperty.all<EdgeInsets>(
-                              const EdgeInsets.all(0))),
-                      onPressed: () => {},
-                      child: const Text(
-                        "BOOK",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold),
-                      )),
-                )
-              ],
-            ),
+        YoutubePlayerBuilder(
+          player: YoutubePlayer(
+            progressColors: const ProgressBarColors(
+                handleColor: otherSecondary,
+                backgroundColor: textPrimary,
+                playedColor: otherSecondary,
+                bufferedColor: brandSecondary),
+            controller: _controller,
           ),
+          builder: (context, player) {
+            return Column(
+              children: [player],
+            );
+          },
         ),
+        const SizedBox(height: 16),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(left: 8),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(16)),
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        Color(0x99C12C2C),
+                        otherSecondary,
+                      ],
+                    ),
+                  ),
+                  child: const Text(
+                    'NEW RELEASE',
+                    style: TextStyle(
+                        fontFamily: 'NunitoSans',
+                        color: textPrimary,
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.fromLTRB(16, 12, 0, 0),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(widget.movie.name,
+                            style: Theme.of(context).textTheme.titleMedium),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        getCategoryWidgets(
+                            widget.movie.additionalDetails.categories),
+                        const SizedBox(
+                          height: 6,
+                        ),
+                        Text(
+                          appendedGenres,
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      ]),
+                ),
+              ]),
+          Container(
+              margin: const EdgeInsets.all(16),
+              child: CustomButton(
+                  text: "BOOK",
+                  buttonType: ButtonType.small,
+                  onPressed: () => {}))
+        ]),
       ],
     );
   }

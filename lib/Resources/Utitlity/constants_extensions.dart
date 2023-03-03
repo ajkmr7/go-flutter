@@ -1,5 +1,5 @@
 // Constants
-import 'constants.dart';
+import './constants.dart';
 
 extension MovieCategoryExtension on MovieCategory {
   String getName() {
@@ -98,5 +98,20 @@ MovieGenre? movieGenreEnumFromString(String value) {
       return MovieGenre.THRILLER;
     default:
       return null;
+  }
+}
+
+extension MovieCertificate on CensorCertificate {
+  String getName() {
+    switch (this) {
+      case CensorCertificate.U:
+        return "U";
+      case CensorCertificate.UA:
+        return "UA";
+      case CensorCertificate.A:
+        return "A";
+      case CensorCertificate.S:
+        return "S";
+    }
   }
 }

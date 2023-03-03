@@ -9,7 +9,7 @@ import 'package:first_app/widgets/components/home/movie_posters_widget.dart';
 import '../../models/movie.dart';
 
 // Constants
-import 'package:first_app/Resources/Constants.dart';
+import 'package:first_app/resources/utitlity/constants.dart';
 
 class HomeWidget extends StatefulWidget {
   final Movies movies;
@@ -43,59 +43,41 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ? NewReleaseBannerWidget(movie: newReleaseMovie)
                 : Container(),
             const SizedBox(
-              height: 12,
-            ),
-            const Divider(
-              color: Color.fromRGBO(85, 85, 85, 1),
-            ),
-            const SizedBox(
-              height: 12,
+              height: 24,
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(16, 0, 0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    'NOW SHOWING',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
+                    'Now Showing',
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ],
               ),
             ),
             const SizedBox(
-              height: 12,
+              height: 16,
             ),
             MoviePostersWidget(movies: widget.movies, isNowShowing: true),
             const SizedBox(
-              height: 12,
-            ),
-            const Divider(
-              color: Color.fromRGBO(85, 85, 85, 1),
-            ),
-            const SizedBox(
-              height: 12,
+              height: 24,
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(16, 0, 0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    'COMING SOON',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
+                    'Coming Soon',
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                 ],
               ),
             ),
             const SizedBox(
-              height: 12,
+              height: 16,
             ),
             MoviePostersWidget(movies: widget.movies, isNowShowing: false),
           ],
